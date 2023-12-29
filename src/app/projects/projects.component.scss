@@ -1,0 +1,129 @@
+#project {
+  margin: auto;
+  // border: 1px solid #fff;
+  width: 100%;
+  margin-bottom: 7%;
+  h2 {
+    padding: 20px 0;
+    text-align: center;
+  }
+  & > div {
+    // border: 1px solid #fff;
+    padding: 10px 30px;
+    margin-top: 5%;
+  }
+
+  .top-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 85%;
+    margin: auto;
+  }
+
+  .project-container {
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background-color: #fff;
+    color: #000;
+    padding: 5rem;
+    transform: skewx(-12deg);
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+
+    .project-description {
+      transform: skewx(12deg);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-basis: 50%;
+
+      p {
+        line-height: 1.5rem;
+      }
+
+      .project-stack {
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+        }
+      }
+
+      .project-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        button {
+          display: block;
+          padding: 0.8rem 1.5rem;
+          background-color: #fff;
+          border: 1px solid black;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .project-img {
+      position: relative;
+      transform: skewx(12deg);
+      flex-basis: 50%;
+
+      img {
+        position: absolute;
+        // width: 300px;
+        // height: 300px;
+        width: 55%;
+        border-radius: 2px;
+        z-index: 10;
+        transition: all 0.2s;
+        outline-offset: 2rem;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      }
+
+      .img-1 {
+        top: -1rem;
+        left: 2rem;
+        z-index: 1;
+      }
+      .img-2 {
+        top: 8rem;
+        left: 9rem;
+        z-index: 3;
+      }
+      .img-3 {
+        top: 1rem;
+        left: 16rem;
+        z-index: 2;
+      }
+    }
+
+    // reverse
+    &-reverse {
+      transform: skewX(12deg);
+      flex-direction: row-reverse;
+
+      .project-description {
+        transform: skewx(-12deg);
+      }
+
+      .project-img {
+        transform: skewx(-12deg);
+
+        .img-1 {
+          left: -2rem;
+        }
+        .img-2 {
+          left: 5rem;
+        }
+        .img-3 {
+          left: 12rem;
+        }
+      }
+    }
+  }
+}
