@@ -1,0 +1,18 @@
+// variables
+
+:root {
+  --primary-background-color: linear-gradient(
+    90deg,
+    rgb(33, 41, 60) 10%,
+    rgba(7, 13, 17, 1) 50%,
+    rgba(33, 41, 60, 1) 160%
+  );
+  --secondary-background-color: #0c0e12;
+  --tri-color: #96c1bb;
+  --primary-font-color: #fff;
+  --secondary-font-color: #7de2d1;
+  --primary-font: "Montserrat", sans-serif;
+  --small-font: 12px;
+  --medium-font: 14px;
+  --large-font: 16px;
+}

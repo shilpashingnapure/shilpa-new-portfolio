@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import "_variables";
+
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding: 8rem;
+}
+
+body {
+  background: var(--primary-background-color);
+  color: var(--primary-font-color);
+  font-size: var(--medium-font);
+  font-family: var(--primary-font);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// custom css for matrial components
+
+.mat-tab-group {
+  min-height: 40vh;
+  display: grid !important;
+  grid-template-columns: 300px 1fr !important;
+
+  .mat-tab-label {
+    padding: 30px 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .mat-tab-label-active {
+    position: relative;
+
+    color: #fff;
+    &:before {
+      content: "";
+      width: 5px;
+      height: 100%;
+      border-radius: 6px;
+      background-color: #47b82e;
+      position: absolute;
+      right: 0;
+    }
+  }
+  .mat-tab-body-active {
+    border-left: 1px solid #fff;
+  }
+
+  .mat-tab-labels {
+    flex-direction: column !important;
+    // border: 1px solid #fff;
+    // align-items: end !important;
+    height: 100%;
+    // text-align: end !important;
+  }
+  .mat-tab-body {
+    padding: 0 20px;
+  }
+
+  .mat-ink-bar {
+    display: none;
+  }
+}

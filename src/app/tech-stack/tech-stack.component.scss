@@ -1,0 +1,35 @@
+#tech {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+  margin-top: 7rem;
+
+  h2 {
+    padding: 20px 0;
+  }
+  & > div {
+    padding: 40px 30px;
+  }
+
+  .front-end {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+  .tech {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
