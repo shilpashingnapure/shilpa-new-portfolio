@@ -1,8 +1,10 @@
 .portfolio {
   display: grid;
   grid-template-rows:
-    40px calc(100vh - 40px) 100vh repeat(2, 100vh) auto 100vh
+    40px calc(100vh - 40px) 100vh repeat(2, 100vh) auto auto
     30vh;
+
+  // gap: 10rem;
 }
 // Header CSS
 header {
@@ -16,7 +18,7 @@ header {
   position: sticky;
   top: 0;
   opacity: 0;
-  z-index: 99;
+  z-index: 9999;
 
   &.show {
     opacity: 1;
@@ -80,6 +82,8 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url("https://cutewallpaper.org/21/star-wars-background-stars/Star-Wars-Tumblr-Backgrounds-Wallpaper-Cave.jpg");
+
   div {
     line-height: 6.5rem;
     animation: header-animation 1s linear;
