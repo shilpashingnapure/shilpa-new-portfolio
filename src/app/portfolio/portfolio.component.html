@@ -1,4 +1,4 @@
-<div class="portfolio" id="top">
+<div class="portfolio" id="top" #parentDiv>
   <header [ngClass]="{ show: scrolled }">
     <div class="icon">
       <img src="../../assets/signature.png" />
@@ -23,12 +23,12 @@
       <li><a href="#contact">Contacts</a><mat-icon> contacts</mat-icon></li>
     </ul>
   </header>
-  <app-home-name></app-home-name>
-  <app-intro></app-intro>
-  <app-tech-stack></app-tech-stack>
-  <app-work-experience></app-work-experience>
-  <app-projects></app-projects>
-  <app-contacts></app-contacts>
+  <app-home-name class="section"></app-home-name>
+  <app-intro class="section"></app-intro>
+  <app-tech-stack class="section"></app-tech-stack>
+  <app-work-experience class="section"></app-work-experience>
+  <app-projects class="section"></app-projects>
+  <app-contacts class="section"></app-contacts>
   <footer>
     <ul>
       <li>
