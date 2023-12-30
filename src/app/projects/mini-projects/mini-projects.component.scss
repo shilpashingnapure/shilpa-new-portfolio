@@ -1,18 +1,51 @@
 .mini-projects {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 27%;
+  grid-auto-columns: 26%;
   gap: 40px;
   margin-top: 5%;
-  padding: 10%;
+  padding: 10% 3%;
   overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  // scroll-padding-inline: 10%;
+  scroll-snap-align: start;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }
 .project-card {
-  //   width: 340px;
-  height: 380px;
+  // width: 340px;
+  // height: 250px;
+  padding: 15px;
   border: 2px solid rgba(51, 65, 85, 0.3);
   border-radius: 0.75rem;
   background-clip: padding-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .project-img {
+    flex-basis: 60%;
+    mask-image: linear-gradient(180deg, #fff 16.35%, hsla(0, 0%, 100%, 0) 95%);
+    -webkit-mask-image: linear-gradient(
+      185deg,
+      #fff 12%,
+      hsla(0, 0%, 100%, 0) 130%
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+    }
+
+    // .project-btns{
+
+    // }
+  }
 
   &:nth-child(odd) {
     transform: rotate(1.5deg);
@@ -34,4 +67,48 @@
   box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
     0 20px 25px -5px rgba(139, 92, 246, 0.2),
     0 8px 10px -6px rgba(139, 92, 246, 0.2);
+}
+
+.orange-bg {
+  background-image: linear-gradient(
+    120deg,
+    rgba(253, 224, 71, 0.8),
+    rgba(225, 29, 72, 0.8)
+  );
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 20px 25px -5px rgba(225, 29, 72, 0.2),
+    0 8px 10px -6px rgba(225, 29, 72, 0.2);
+}
+
+.green-bg {
+  background-image: linear-gradient(
+    120deg,
+    rgba(74, 222, 128, 0.7),
+    rgba(8, 145, 178, 0.8)
+  );
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 20px 25px -5px rgba(8, 145, 178, 0.2),
+    0 8px 10px -6px rgba(8, 145, 178, 0.2);
+}
+
+.yellow-bg {
+  background-image: linear-gradient(
+    140deg,
+    rgba(249, 115, 22, 0.5),
+    rgba(234, 179, 8, 0.8)
+  );
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 20px 25px -5px rgba(234, 179, 8, 0.2),
+    0 8px 10px -6px rgba(234, 179, 8, 0.2);
+}
+
+.purpule-bg {
+  background-image: linear-gradient(
+    200deg,
+    rgba(168, 85, 247, 0.8),
+    rgba(2, 132, 199, 0.4)
+  );
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
+    0 20px 25px -5px rgbargba(2, 132, 199, 0.2),
+    0 8px 10px -6px rgba(2, 132, 199, 0.2);
 }

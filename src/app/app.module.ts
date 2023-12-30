@@ -13,6 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs';
 import { MiniProjectsComponent } from './projects/mini-projects/mini-projects.component';
+import { BlobbyAnimationButtonComponent } from './common-component/blobby-animation-button/blobby-animation-button.component';
+import { HomeNameComponent } from './portfolio/home-name/home-name.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { MiniProjectsComponent } from './projects/mini-projects/mini-projects.co
     IntroComponent,
     ProjectsComponent,
     TechStackComponent,
-    MiniProjectsComponent
+    MiniProjectsComponent,
+    BlobbyAnimationButtonComponent,
+    HomeNameComponent
   ],
   imports: [
     BrowserModule,
