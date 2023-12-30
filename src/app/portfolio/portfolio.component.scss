@@ -3,8 +3,6 @@
   grid-template-rows:
     40px calc(100vh - 40px) 100vh repeat(2, 100vh) auto auto
     30vh;
-
-  // gap: 10rem;
 }
 // Header CSS
 header {
@@ -93,12 +91,6 @@ footer {
       font-size: 5.2rem;
     }
   }
-}
-
-.intro {
-  // clip-path: polygon(0% 0%, 99% 15%, 99% 84%, 53% 95%, 0% 80%);
-  // background: #fff;
-  padding-top: 30px;
 }
 
 @keyframes header-animation {

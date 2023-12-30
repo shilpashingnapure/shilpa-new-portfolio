@@ -139,6 +139,7 @@ html {
   left: 50%;
   bottom: -70%;
   margin-left: -100%;
+  overflow: hidden;
 
   &:before {
     content: " ";

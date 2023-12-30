@@ -13,7 +13,6 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs';
 import { MiniProjectsComponent } from './projects/mini-projects/mini-projects.component';
-import { BlobbyAnimationButtonComponent } from './common-component/blobby-animation-button/blobby-animation-button.component';
 import { HomeNameComponent } from './portfolio/home-name/home-name.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { HomeNameComponent } from './portfolio/home-name/home-name.component';
     ProjectsComponent,
     TechStackComponent,
     MiniProjectsComponent,
-    BlobbyAnimationButtonComponent,
     HomeNameComponent
   ],
   imports: [
@@ -34,7 +32,7 @@ import { HomeNameComponent } from './portfolio/home-name/home-name.component';
     AppRoutingModule,
     MatIconModule,
     BrowserAnimationsModule ,
-    MatTabsModule
+    MatTabsModule ,
   ],
   providers: [],
   bootstrap: [AppComponent]

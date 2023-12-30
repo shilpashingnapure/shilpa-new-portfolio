@@ -16,6 +16,8 @@ export class PortfolioComponent implements OnInit {
   @HostListener("window:scroll" , [])
   onWindowScroll(){
     this.scrolled = window.scrollY > 0;
+
+    
     
   }
 
