@@ -66,15 +66,15 @@ $shadows-big: multiple-box-shadow(150);
   }
 }
 
-html {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  font-family: "lato", sans-serif;
-  color: #fff;
-  background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
-  overflow-x: hidden;
-}
+// html {
+//   position: fixed;
+//   height: 100%;
+//   width: 100%;
+//   font-family: "lato", sans-serif;
+//   color: #fff;
+//   background: radial-gradient(ellipse at bottom, #0c1116 0%, #090a0f 100%);
+//   overflow-x: hidden;
+// }
 
 #horizon {
   position: absolute;

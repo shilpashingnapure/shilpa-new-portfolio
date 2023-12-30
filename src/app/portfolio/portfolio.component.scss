@@ -1,8 +1,6 @@
 .portfolio {
   display: grid;
-  grid-template-rows:
-    40px calc(100vh - 40px) 100vh repeat(2, 100vh) auto auto
-    30vh;
+  grid-template-rows: 40px calc(100vh - 40px) 100vh repeat(2, 100vh) auto auto;
 }
 // Header CSS
 header {
@@ -43,35 +41,6 @@ header {
         cursor: pointer;
       }
     }
-  }
-}
-
-footer {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--large-font);
-  background: rgb(38, 49, 72);
-  ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0 20px;
-
-    img {
-      width: 30px;
-      height: 30px;
-      filter: invert(100%) sepia(60%) saturate(7359%) hue-rotate(178deg)
-        brightness(100%) contrast(93%);
-    }
-  }
-
-  .credit {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 }
 
