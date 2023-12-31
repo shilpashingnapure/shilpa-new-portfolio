@@ -1,0 +1,33 @@
+.section-heading {
+  position: relative;
+  width: 60%;
+  height: 150px;
+  white-space: nowrap;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 1px;
+  overflow: hidden;
+  margin: 20px auto;
+  margin-left: 35%;
+
+  h2 {
+    text-stroke: 1px #47b82e;
+    -webkit-text-stroke: 1px #47b82e;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.4;
+    font-size: 100px;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: absolute;
+    top: 35%;
+    left: 12px;
+    border-bottom: 2px solid #47b82e;
+    width: 65%;
+    text-align: left;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
