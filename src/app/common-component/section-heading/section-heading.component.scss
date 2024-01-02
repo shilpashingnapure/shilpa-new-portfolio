@@ -1,7 +1,7 @@
 .section-heading {
   position: relative;
   width: 60%;
-  height: 150px;
+  height: 120px;
   white-space: nowrap;
   font-family: Poppins, sans-serif;
   letter-spacing: 1px;
@@ -10,9 +10,9 @@
   margin-left: 35%;
 
   h2 {
-    text-stroke: 1px #47b82e;
+    // text-stroke: 1px #47b82e;
     -webkit-text-stroke: 1px #47b82e;
-    text-fill-color: transparent;
+    // text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
     opacity: 0.4;
     font-size: 100px;
