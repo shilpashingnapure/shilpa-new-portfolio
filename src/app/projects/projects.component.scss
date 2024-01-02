@@ -1,110 +1,8 @@
-@import "~compass-mixins/lib/compass/css3";
-
-@function multiple-box-shadow($n) {
-  $value: "#{random(2000)}px #{random(2000)}px #FFF";
-  @for $i from 2 through $n {
-    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
-  }
-  @return unquote($value);
-}
-
-$shadows-small: multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(250);
-$shadows-big: multiple-box-shadow(150);
-
-#stars {
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  box-shadow: $shadows-small;
-  animation: animStar 50s linear infinite;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: $shadows-small;
-  }
-}
-
-#stars2 {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  box-shadow: $shadows-medium;
-  animation: animStar 100s linear infinite;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 2px;
-    height: 2px;
-    background: transparent;
-    box-shadow: $shadows-medium;
-  }
-}
-
-#stars3 {
-  width: 3px;
-  height: 3px;
-  background: transparent;
-  box-shadow: $shadows-big;
-  animation: animStar 150s linear infinite;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    top: 2000px;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $shadows-big;
-  }
-}
-
 #project {
   margin: auto;
-  // border: 1px solid #fff;
   width: 100%;
   margin-bottom: 7%;
-  .section-heading {
-    position: relative;
-    width: 90%;
-    height: 220px;
-    white-space: nowrap;
-    font-family: Poppins, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: auto;
-    overflow: hidden;
 
-    h2 {
-      text-stroke: 1px #47b82e;
-      -webkit-text-stroke: 1px #47b82e;
-      text-fill-color: transparent;
-      -webkit-text-fill-color: transparent;
-      opacity: 0.4;
-      font-size: 130px;
-      text-transform: uppercase;
-      margin-left: 18%;
-    }
-
-    p {
-      position: absolute;
-      top: 33%;
-      left: 35%;
-      border-bottom: 2px solid #47b82e;
-      width: 55%;
-      text-align: left;
-      font-size: 36px;
-      letter-spacing: 2px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
   & > div {
     padding: 10px 30px;
     margin-top: 5%;
@@ -134,12 +32,10 @@ $shadows-big: multiple-box-shadow(150);
     border-radius: 5px;
     position: absolute;
     width: 90%;
-    height: 450px;
     backface-visibility: hidden;
     perspective: 1000px;
     perspective-origin: bottom;
     transform-style: preserve-3d;
-    // margin-bottom: 40px;
 
     .project-description {
       transform: skewx(12deg);
@@ -175,6 +71,11 @@ $shadows-big: multiple-box-shadow(150);
           background-color: #fff;
           border: 1px solid black;
           border-radius: 5px;
+          cursor: pointer;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
         }
       }
     }
@@ -193,7 +94,6 @@ $shadows-big: multiple-box-shadow(150);
         transition: all 0.2s;
         outline-offset: 2rem;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-        // object-fit: contain;
       }
 
       .img-1 {
@@ -214,7 +114,7 @@ $shadows-big: multiple-box-shadow(150);
     }
 
     // reverse
-    &-reverse {
+    &:nth-child(even) {
       transform: skewX(12deg);
       flex-direction: row-reverse;
 
@@ -239,51 +139,22 @@ $shadows-big: multiple-box-shadow(150);
     &:nth-child(1) {
       border-radius: 5px 5px 0 0;
     }
+
     // project divs alignment
     &:nth-child(2) {
-      top: 460px;
-      left: 13px;
-      // animation: fold-animation-1 3s linear forwards;
+      top: 504px;
+      left: 8px;
       transform-origin: top;
       transform-style: preserve-3d;
       border-radius: 0;
-      // opacity: 0;
     }
 
     &:nth-child(3) {
-      top: 910px;
-      right: 14px;
-      // animation: fold-animation-2 3s 3s linear forwards;
-      // opacity: 0;
-      // animation-delay: 3s;
+      top: 998px;
+      right: 10px;
       transform-origin: top;
       transform-style: preserve-3d;
       border-radius: 0 0 5px 5px;
     }
-  }
-}
-
-@keyframes fold-animation-1 {
-  from {
-    transform: rotateX(180deg);
-    top: 460px;
-    // left: -600px;
-    // opacity: 0;
-  }
-  to {
-    transform: skewX(12deg) rotateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fold-animation-2 {
-  from {
-    transform: skewX(12deg) rotateX(180deg);
-    top: 550px;
-    opacity: 0;
-  }
-  to {
-    transform: skewX(-12deg) rotateX(0);
-    opacity: 1;
   }
 }

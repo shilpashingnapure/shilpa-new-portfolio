@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {MatTabsModule} from '@angular/material/tabs';
 import { MiniProjectsComponent } from './projects/mini-projects/mini-projects.component';
 import { HomeNameComponent } from './portfolio/home-name/home-name.component';
+import { StarsFallingComponent } from './common-component/stars-falling/stars-falling.component';
+import { SectionHeadingComponent } from './common-component/section-heading/section-heading.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HomeNameComponent } from './portfolio/home-name/home-name.component';
     ProjectsComponent,
     TechStackComponent,
     MiniProjectsComponent,
-    HomeNameComponent
+    HomeNameComponent,
+    StarsFallingComponent,
+    SectionHeadingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,52 +1,58 @@
-import { Component, ElementRef, HostListener, Inject, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { Router } from '@angular/router';
 
-import {gsap} from 'gsap';
-import { ScrollTrigger} from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
+  @ViewChild('parentDiv') parentDiv: ElementRef<HTMLDivElement>;
 
+  constructor(private router: Router) {}
 
-  // @ViewChild('parentDiv') parentDiv  =  ElementRef<HTMLDivElement>;
+  scrolled: boolean = false;
 
-
-  constructor() { }
-
-  scrolled : boolean = false;
-
-
-  @HostListener("window:scroll" , [])
-  onWindowScroll(){
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
     this.scrolled = window.scrollY > 0;
-
-    
-    
+    // this.snappingAnimation();
   }
 
   ngOnInit(): void {
-    // this.snappingAnimation()
-    
+    // this.snappingAnimation();
   }
 
-  snappingAnimation(){
-    let sections = gsap.utils.toArray(".section")
-    console.log(sections)
+  ngAfterViewInit(): void {
+    // this.snappingAnimation();
+  }
 
-    gsap.to(sections , {
-      xPercent : -100 * (sections.length - 1) , 
-      ease : "none" ,
-      scrollTrigger : {
-        trigger : ".portfolio" ,
-        snap : 1 / (sections.length - 1) ,
-        
+  snappingAnimation() {
+    this.router.events.subscribe((event) => {
+      console.log(event);
+      const tree = this.router.parseUrl(this.router.url);
+      if (tree.fragment) {
+        const element = document.querySelector('#' + tree.fragment);
+        console.log(element);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 500);
+        }
       }
-    })
+    });
   }
-
 }

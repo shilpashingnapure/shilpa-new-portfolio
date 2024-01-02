@@ -1,127 +1,109 @@
-<div id="stars"></div>
-<div id="stars2"></div>
-<div id="stars3"></div>
+<app-stars-falling></app-stars-falling>
 <div id="project">
-  <div class="section-heading">
-    <h2>Projects</h2>
-    <p>My projects</p>
-  </div>
+  <app-section-heading
+    large_heading="projects"
+    small_heading="Top Projects"
+  ></app-section-heading>
 
   <div class="top-projects">
     <div class="project-container">
-      <div class="project-description">
-        <h1>Mailchimp Clone</h1>
-        <p>
-          Mailchimp is a marketing automation platform and email marketing
-          service. we tried to implement the features are create new email and
-          customize existing email templates, Send templates through email and
-          keep records of email sending, Can do email marking to multiple users.
-          Team of 6 Members.
-        </p>
-        <div class="project-stack">
-          <img src="./assets/Tech/react.png" />
-          <img src="./assets/Tech/node.webp" />
-          <img src="./assets/Tech/mongodb.png" />
-          <img src="./assets/Tech/html.png" />
-          <img src="./assets/Tech/css.png" />
-          <img src="./assets/Tech/js.png" />
-        </div>
-        <div class="project-links">
-          <button>Visit Now</button>
-          <button>Github</button>
-          <button>Demo</button>
-        </div>
-      </div>
-      <div class="project-img">
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/mailchimp2.daeaf546bb7afc8bf86b.PNG"
-          class="img-1"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/mailchimp1.d07467cab439883e08db.PNG"
-          class="img-2"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/mailchimp3.07c419a98f604f1bbba7.PNG"
-          class="img-3"
-        />
-      </div>
+      <ng-container
+        [ngTemplateOutlet]="project"
+        [ngTemplateOutletContext]="{
+          name: 'Mailchimp Clone',
+          stack: [
+            'react.png',
+            'node.webp',
+            'mongodb.png',
+            'html.png',
+            'css.png',
+            'js.png'
+          ],
+          img: ['mailchimp2.PNG', 'mailchimp1.PNG', 'mailchimp3.PNG'],
+          link: {
+            visit: 'https://mailchimp-frontend.vercel.app/',
+            github: 'https://github.com/shilpashingnapure/Clone-of-Mailchimp',
+            demo: 'https://player.vimeo.com/video/756101155?h=e6e013b7d8'
+          },
+          description:
+            'Mailchimp is a marketing automation platform and email marketing service. we tried to implement the features are create new email and customize existing email templates, Send templates through email and keep records of email sending, Can do email marking to multiple users. Team of 6 Members.'
+        }"
+      ></ng-container>
     </div>
 
-    <div class="project-container project-container-reverse project-1">
-      <div class="project-description">
-        <h1>Theory Clone</h1>
-        <p>
-          New York fashion brand “Theory” is based on women’s and men’s
-          contemporary fashion label. We tried to implement E-commerce
-          functionalities product database, Add to cart, search, admin page,
-          Authorization, Payment, OTP verification using Gmail API, etc. Won 1
-          rank amongst 70+ projects. Team of 5 members.
-        </p>
-        <div class="project-stack">
-          <img src="./assets/Tech/react.png" />
-          <img src="./assets/Tech/node.webp" />
-          <img src="./assets/Tech/mongodb.png" />
-          <img src="./assets/Tech/html.png" />
-          <img src="./assets/Tech/css.png" />
-          <img src="./assets/Tech/js.png" />
-        </div>
-        <div class="project-links">
-          <button>Visit Now</button>
-          <button>Github</button>
-          <button>Demo</button>
-        </div>
-      </div>
-      <div class="project-img">
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/theory3.28c179b4e8001d5323a4.png"
-          class="img-1"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/theory1.4829e53b46487c51bf46.png"
-          class="img-2"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/theory2.ddb98813a6ccedd74f5a.png"
-          class="img-3"
-        />
-      </div>
+    <div class="project-container" id="project-1">
+      <ng-container
+        [ngTemplateOutlet]="project"
+        [ngTemplateOutletContext]="{
+          name: 'Theory Clone',
+          stack: [
+            'react.png',
+            'node.webp',
+            'mongodb.png',
+            'html.png',
+            'css.png',
+            'js.png'
+          ],
+          img: ['theory3.png', 'theory1.png', 'theory2.png'],
+          link: {
+            visit: 'https://theroybackend.onrender.com/',
+            github: 'https://github.com/shilpashingnapure/Theory_Clone-Backend',
+            demo: 'https://player.vimeo.com/video/689858338?h=1e538fdf27'
+          },
+          description:
+            'New York fashion brand “Theory” is based on women’s and men’s contemporary fashion label. We tried to implement E-commerce functionalities product database, Add to cart, search, admin page, Authorization, Payment, OTP verification using Gmail API, etc. Won 1 rank amongst 70+ projects. Team of 5 members.'
+        }"
+      ></ng-container>
     </div>
-    <div class="project-container project-2">
-      <div class="project-description">
-        <h1>Forest Essentials India Clone</h1>
-        <p>
-          Forest Essentials is an Indian cosmetics, skincare and perfume company
-          that specialize in Ayurvedic preparations for its products. We
-          implement basic e-commarce all functionalites. buy products ,add to
-          cart , payment getway funtionalites etc. we are 2nd rank holder
-          amongst 100+ projects. Team of 6 Members.
-        </p>
-        <div class="project-stack">
-          <img src="./assets/Tech/html.png" />
-          <img src="./assets/Tech/css.png" />
-          <img src="./assets/Tech/js.png" />
-        </div>
-        <div class="project-links">
-          <button>Visit Now</button>
-          <button>Github</button>
-          <button>Demo</button>
-        </div>
-      </div>
-      <div class="project-img">
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/forest3.5c879100a3abfa8ca779.png"
-          class="img-1"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/forest.8ee91de6a28814760da3.gif"
-          class="img-2"
-        />
-        <img
-          src="https://shilpa17-shingnapure-portfolio.vercel.app/static/media/forest1.053f81f910381033e1f1.PNG"
-          class="img-3"
-        />
-      </div>
+    <div class="project-container" id="project-2">
+      <ng-container
+        [ngTemplateOutlet]="project"
+        [ngTemplateOutletContext]="{
+          name: 'Forest Essentials India Clone',
+          stack: ['html.png', 'css.png', 'js.png'],
+          img: ['forest-2.PNG', 'forest-1.gif', 'forest-3.png'],
+          link: {
+            visit: 'https://shilpashingnapure.github.io/forestessentialsindia/',
+            github:
+              'https://github.com/shilpashingnapure/forestessentialsindia',
+            demo: 'https://player.vimeo.com/video/689858253?h=1744dc5262'
+          },
+          description:
+            'Forest Essentials is an Indian cosmetics, skincare and perfume company that specialize in Ayurvedic preparations for its products. We implement basic e-commarce all functionalites. buy products ,add to cart , payment getway funtionalites etc. we are 2nd rank holder amongst 100+ projects. Team of 6 Members.'
+        }"
+      ></ng-container>
     </div>
   </div>
+  <app-mini-projects></app-mini-projects>
 </div>
+
+<ng-template
+  #project
+  let-name="name"
+  let-description="description"
+  let-stack="stack"
+  let-img="img"
+  let-link="link"
+>
+  <div class="project-description">
+    <h1>{{ name }}</h1>
+    <p>
+      {{ description }}
+    </p>
+    <div class="project-stack">
+      <ng-container *ngFor="let icon of stack">
+        <img src="./assets/Tech/{{ icon }}" />
+      </ng-container>
+    </div>
+    <div class="project-links">
+      <a href="{{ link?.visit }}" target="_blank"><button>Visit Now</button></a>
+      <a href="{{ link?.github }}" target="_blank"><button>Github</button></a>
+      <a href="{{ link?.demo }}" target="_blank"><button>Demo</button></a>
+    </div>
+  </div>
+  <div class="project-img">
+    <img src="./assets/projects/{{ img[0] }}" class="img-1" />
+    <img src="./assets/projects/{{ img[1] }}" class="img-2" />
+    <img src="./assets/projects/{{ img[2] }}" class="img-3" />
+  </div>
+</ng-template>

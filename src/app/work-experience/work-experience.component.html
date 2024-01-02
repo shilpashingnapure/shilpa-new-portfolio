@@ -1,8 +1,8 @@
 <div id="work">
-  <div class="section-heading">
-    <h2>Experience</h2>
-    <p>My Experience</p>
-  </div>
+  <app-section-heading
+    large_heading="experience"
+    small_heading="My Experience"
+  ></app-section-heading>
   <div>
     <mat-tab-group
       mat-stretch-tabs="false"
@@ -11,55 +11,68 @@
       [disablePagination]="true"
     >
       <mat-tab label="Political Data Inc.">
-        <div class="work-description">
-          <h2>Political Data Intelligence.</h2>
-          <h4>Associate Full Stack Engineer <i>Feb 2023 - Present</i></h4>
-          <ul>
-            <li>
-              Worked extensively in Angular 14 , HTML , SCSS and GraphQL to
-              develop various features.
-            </li>
-            <li>
-              Developed the ‘Approve/Canvasser’ Detail page , effectively
-              displaying canvasser survey details with used of Akita store for
-              efficient data handling.
-            </li>
-            <li>
-              Developed the ‘Manage Canvassing Project’ page utilizing SCSS ,
-              Angular Material UI and GraphQL API across all web pages.
-            </li>
-            <li>
-              While Troubleshooting backend bugs , gaining hands-on experience
-              in working with PostgreSQL , TypeORM and NestJs and writing test
-              cases.
-            </li>
-            <li>
-              Resolved issues within the Supporter App by utilizing react and
-              CSS for frontend fixes.
-            </li>
-            <li>Effectively resolved bugs across both frontend and backend.</li>
-          </ul>
-        </div>
+        <ng-container
+          [ngTemplateOutlet]="workDescription"
+          [ngTemplateOutletContext]="{
+            label: 'Political Data Intelligence',
+            position: 'Associate Full Stack Engineer',
+            date: {
+              start: 'Feb 2023',
+              end: 'Present'
+            },
+            description: [
+              'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
+              'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
+              'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.',
+              'While Troubleshooting backend bugs , gaining hands-on experience in working with PostgreSQL , TypeORM and NestJs and writing test cases.',
+              'Resolved issues within the Supporter App by utilizing react and CSS for frontend fixes.',
+              'Effectively resolved bugs across both frontend and backend.'
+            ]
+          }"
+        >
+        </ng-container>
       </mat-tab>
       <mat-tab label="Masai School">
-        <div class="work-description">
-          <h2>Masai School</h2>
-          <h4>Instructional Associate <i>Feb 2023 - Present</i></h4>
-          <ul>
-            <li>
-              Helping students in solving conceptual doubts via stand-up’s &
-              pair programming sessions.
-            </li>
-            <li>Building communication between students & instructor.</li>
-            <li>Mentoring students in the field of web development.</li>
-            <li>
-              Reviewing projects, portfolios and taking mock interviews to help
-              students.
-            </li>
-            <li>Delivering lectures and PSC whenever needed.</li>
-          </ul>
-        </div>
+        <ng-container
+          [ngTemplateOutlet]="workDescription"
+          [ngTemplateOutletContext]="{
+            label: 'Masai School',
+            position: 'Instructional Associate',
+            date: {
+              start: 'April 2022',
+              end: 'Feb 2023'
+            },
+            description: [
+              'Helping students in solving conceptual doubts via stand-up’s & pair programming sessions.',
+              'Building communication between students & instructor.',
+              'Mentoring students in the field of web development.',
+              'Reviewing projects, portfolios and taking mock interviews to help students.',
+              'Delivering lectures and PSC whenever needed.'
+            ]
+          }"
+        >
+        </ng-container>
       </mat-tab>
     </mat-tab-group>
   </div>
 </div>
+
+<ng-template
+  #workDescription
+  let-label="label"
+  let-position="position"
+  let-date="date"
+  let-description="description"
+>
+  <div class="work-description">
+    <h2>{{ label }}</h2>
+    <h4>
+      {{ position }} <i>{{ date.start }} - {{ date.end }}</i>
+    </h4>
+    <ul>
+      <li *ngFor="let sentance of description">
+        {{ sentance }}
+      </li>
+    </ul>
+  </div>
+</ng-template>

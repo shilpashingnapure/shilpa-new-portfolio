@@ -1,72 +1,24 @@
 <div id="tech">
-  <div class="section-heading">
-    <h2>Skills</h2>
-    <p>My Skills</p>
-  </div>
-  <div class="front-end">
-    <div class="tech">
-      <img src="./assets/Tech/js.png" />
-      <span>JavasScript</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/ts.png" />
-      <span>TypeScript</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/node.webp" />
-      <span>Node.js</span>
-    </div>
-
-    <div class="tech">
-      <img src="./assets/Tech/react.png" />
-      <span>React</span>
-    </div>
-
-    <div class="tech">
-      <img src="./assets/Tech/angular.svg" />
-      <span>Angular</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/nestjs.png" />
-      <span>Nest.js</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/html.png" />
-      <span>HTML</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/css.png" />
-      <span>CSS</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/sass.webp" />
-      <span>Sass</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/graphql.png" />
-      <span>GraphQL</span>
-    </div>
-
-    <div class="tech">
-      <img src="./assets/Tech/postgresql.png" />
-      <span>PostgreSQL</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/mongodb.png" />
-      <span>MongoDB</span>
-    </div>
-
-    <div class="tech">
-      <img src="./assets/Tech/python.webp" />
-      <span>Python</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/dj.jpeg" />
-      <span>Django</span>
-    </div>
-    <div class="tech">
-      <img src="./assets/Tech/bootstrap.svg" />
-      <span>Bootstrap</span>
-    </div>
+  <app-section-heading
+    large_heading="skills"
+    small_heading="My Skills"
+  ></app-section-heading>
+  <div class="tech-stack">
+    <ng-container
+      *ngFor="let stack of techIcons"
+      [ngTemplateOutlet]="techStack"
+      [ngTemplateOutletContext]="{
+        name: stack.name,
+        icon: stack.icon
+      }"
+    >
+    </ng-container>
   </div>
 </div>
+
+<ng-template #techStack let-name="name" let-icon="icon">
+  <div class="tech">
+    <img src="/assets/Tech/{{ icon }}" />
+    <span>{{ name }}</span>
+  </div>
+</ng-template>

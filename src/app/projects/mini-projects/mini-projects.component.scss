@@ -1,14 +1,16 @@
 .mini-projects {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 26%;
-  gap: 40px;
-  margin-top: 5%;
-  padding: 10% 3%;
-  overflow-x: auto;
   scroll-snap-type: inline mandatory;
-  // scroll-padding-inline: 10%;
+  scroll-padding-inline: 10%;
   scroll-snap-align: start;
+  color: #000;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  height: 100%;
+  gap: 30px;
+  margin: auto;
+  padding: 2rem 4rem;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -16,8 +18,8 @@
   }
 }
 .project-card {
-  // width: 340px;
-  // height: 250px;
+  width: 340px;
+  flex: 0 0 auto;
   padding: 15px;
   border: 2px solid rgba(51, 65, 85, 0.3);
   border-radius: 0.75rem;
@@ -26,14 +28,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: #fff;
+  gap: 10px;
+
+  .project-heading {
+    font-weight: 700;
+    font-size: 23px;
+  }
 
   .project-img {
     flex-basis: 60%;
-    mask-image: linear-gradient(180deg, #fff 16.35%, hsla(0, 0%, 100%, 0) 95%);
+    mask-image: linear-gradient(
+      180deg,
+      #fff 16.35%,
+      hsla(0, 0%, 100%, 0) 91.66%
+    );
     -webkit-mask-image: linear-gradient(
-      185deg,
-      #fff 12%,
-      hsla(0, 0%, 100%, 0) 130%
+      180deg,
+      #fff 16.35%,
+      hsla(0, 0%, 100%, 0) 91.66%
     );
 
     img {
@@ -41,10 +54,35 @@
       height: 100%;
       border-radius: 0.75rem;
     }
+  }
 
-    // .project-btns{
+  .tech-stack {
+    display: flex;
+    gap: 1rem;
 
-    // }
+    span {
+      background: rgba(226, 232, 240, 0.4);
+      font-size: 13px;
+      font-weight: 300;
+      display: inline-block;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    span:hover {
+      background: rgba(226, 232, 240, 0.7);
+    }
+  }
+
+  .project-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+    }
   }
 
   &:nth-child(odd) {
@@ -54,61 +92,4 @@
   &:nth-child(even) {
     transform: rotate(-1.5deg);
   }
-}
-
-// bg colors for card
-
-.voilet-bg {
-  background-image: linear-gradient(
-    40deg,
-    rgba(249, 168, 212, 0.8),
-    rgba(139, 92, 246, 0.4)
-  );
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
-    0 20px 25px -5px rgba(139, 92, 246, 0.2),
-    0 8px 10px -6px rgba(139, 92, 246, 0.2);
-}
-
-.orange-bg {
-  background-image: linear-gradient(
-    120deg,
-    rgba(253, 224, 71, 0.8),
-    rgba(225, 29, 72, 0.8)
-  );
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
-    0 20px 25px -5px rgba(225, 29, 72, 0.2),
-    0 8px 10px -6px rgba(225, 29, 72, 0.2);
-}
-
-.green-bg {
-  background-image: linear-gradient(
-    120deg,
-    rgba(74, 222, 128, 0.7),
-    rgba(8, 145, 178, 0.8)
-  );
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
-    0 20px 25px -5px rgba(8, 145, 178, 0.2),
-    0 8px 10px -6px rgba(8, 145, 178, 0.2);
-}
-
-.yellow-bg {
-  background-image: linear-gradient(
-    140deg,
-    rgba(249, 115, 22, 0.5),
-    rgba(234, 179, 8, 0.8)
-  );
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
-    0 20px 25px -5px rgba(234, 179, 8, 0.2),
-    0 8px 10px -6px rgba(234, 179, 8, 0.2);
-}
-
-.purpule-bg {
-  background-image: linear-gradient(
-    200deg,
-    rgba(168, 85, 247, 0.8),
-    rgba(2, 132, 199, 0.4)
-  );
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000,
-    0 20px 25px -5px rgbargba(2, 132, 199, 0.2),
-    0 8px 10px -6px rgba(2, 132, 199, 0.2);
 }

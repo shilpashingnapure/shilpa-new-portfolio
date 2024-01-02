@@ -1,41 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Allison&family=Babylonica&family=Festive&family=Montserrat:wght@300;400;500;600;700&family=Nunito&family=Poppins:wght@300;400;500;600;700&family=Yellowtail&display=swap");
-#about {
-  margin-top: 5%;
-
-  .section-heading {
-    position: relative;
-    width: 90%;
-    height: 210px;
-    white-space: nowrap;
-    font-family: Poppins, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: auto;
-    overflow: hidden;
-
-    h2 {
-      text-stroke: 1px #47b82e;
-      -webkit-text-stroke: 1px #47b82e;
-      text-fill-color: transparent;
-      -webkit-text-fill-color: transparent;
-      opacity: 0.4;
-      font-size: 130px;
-      text-transform: uppercase;
-    }
-
-    p {
-      position: absolute;
-      top: 33%;
-      left: 34%;
-      border-bottom: 2px solid #47b82e;
-      width: 55%;
-      text-align: left;
-      font-size: 36px;
-      letter-spacing: 2px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
-}
 .intro-section {
   margin: auto;
   width: 70%;
@@ -44,7 +6,6 @@
   color: #000;
   box-shadow: 0px 0px 6px 0px #22222280;
   height: 50vh;
-  font-family: "Nunito", sans-serif;
   font-weight: 300;
   transform: translateY(15%);
 

@@ -2,54 +2,8 @@
   margin: auto;
   width: 100%;
   font-size: 16px;
-  & > h2 {
-    padding: 20px 0;
-    background: linear-gradient(130deg, #47b82e 0 60%, transparent 60% 100%);
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    margin: 2.5rem 0;
-    padding-right: 50px;
-    margin-bottom: 5rem;
-  }
-
-  .section-heading {
-    position: relative;
-    width: 90%;
-    height: 220px;
-    white-space: nowrap;
-    font-family: Poppins, sans-serif;
-    text-align: center;
-    letter-spacing: 1px;
-    margin: auto;
-    overflow: hidden;
-
-    h2 {
-      text-stroke: 1px #47b82e;
-      -webkit-text-stroke: 1px #47b82e;
-      text-fill-color: transparent;
-      -webkit-text-fill-color: transparent;
-      opacity: 0.4;
-      font-size: 130px;
-      text-transform: uppercase;
-      margin-left: 18%;
-    }
-
-    p {
-      position: absolute;
-      top: 30%;
-      left: 32%;
-      border-bottom: 2px solid #47b82e;
-      width: 55%;
-      text-align: left;
-      font-size: 36px;
-      letter-spacing: 2px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
 
   & > div {
-    // border: 1px solid #fff;
     margin: auto;
     margin-top: 4%;
     width: 80%;

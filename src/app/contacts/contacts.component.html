@@ -1,8 +1,8 @@
 <div id="contact">
-  <div class="section-heading">
-    <h2>Contact</h2>
-    <p>Contact Me</p>
-  </div>
+  <app-section-heading
+    large_heading="contact"
+    small_heading="Contact Me"
+  ></app-section-heading>
   <div class="contact-container">
     <div class="card">
       <input type="checkbox" />
@@ -38,31 +38,11 @@
           ></textarea>
           <label for="message" class="form__label">Message</label>
         </div>
-        <div class="btn">
-          <button class="button">
-            <span class="default">Send</span>
-            <span class="success">
-              <svg viewBox="0 0 16 16">
-                <polyline points="3.75 9 7 12 13 5"></polyline>
-              </svg>
-              Sent
-            </span>
-            <svg class="trails" viewBox="0 0 33 64">
-              <path
-                d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"
-              ></path>
-              <path
-                d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"
-              ></path>
-            </svg>
-            <div class="plane">
-              <div class="left"></div>
-              <div class="right"></div>
-            </div>
-          </button>
+        <div class="form-btn">
+          <button>Send</button>
         </div>
       </div>
-      <div class="shapes"></div>
+      <!-- <div class="shapes"></div> -->
       <div class="photo">
         <div></div>
         <div></div>
@@ -73,8 +53,8 @@
       </div>
     </div>
   </div>
-  <!-- 
-  <div class="footer">
+
+  <div class="contact-links">
     <ul>
       <li>
         <img src="https://www.svgrepo.com/show/325236/github.svg" />
@@ -93,15 +73,6 @@
       <li>
         <img src="https://www.svgrepo.com/show/368609/codepen.svg" />
       </li>
-      <li>
-        <img src="https://www.svgrepo.com/show/341892/hackerrank.svg" />
-      </li>
     </ul>
-    <div class="credit">
-      <span>Designed & Built By </span>
-      <span>🥰</span>
-      <span>Shilpa Shingnapure</span>
-    </div>
-    <p>copyright 2024</p>
-  </div> -->
+  </div>
 </div>
