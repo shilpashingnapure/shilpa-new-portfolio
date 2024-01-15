@@ -3,56 +3,66 @@
     large_heading="contact"
     small_heading="Contact Me"
   ></app-section-heading>
-  <div class="contact-container">
-    <div class="card">
-      <input type="checkbox" />
-      <div class="form">
-        <div class="form_group">
-          <input
-            type="text"
-            class="form__input"
-            placeholder="Full name"
-            id="name"
-          />
-          <label for="name" class="form__label">Full name</label>
-        </div>
-        <div class="form_group">
-          <input
-            type="text"
-            class="form__input"
-            placeholder="Email"
-            id="email"
-          />
-          <label for="name" class="form__label">Email</label>
-        </div>
-      </div>
+  <form [formGroup]="profileForm" (submit)="handleForm()" #form>
+    <div class="contact-container">
+      <div class="card">
+        <input type="checkbox" [checked]="isChecked" (change)="changeSide()"/>
+        <div class="form">
+          <div class="form_group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              id="name"
+              name="name"
+              formControlName="name"
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
+          <div class="form_group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Email"
+              id="email"
+              name="email"
+              formControlName="email"
 
-      <a>Next</a>
-      <div class="msg">
-        <div class="form_group">
-          <textarea
-            placeholder="Message"
-            id="message"
-            class="form__input"
-            rows="7"
-          ></textarea>
-          <label for="message" class="form__label">Message</label>
+            />
+            <label for="name" class="form__label">Email</label>
+          </div>
         </div>
-        <div class="form-btn">
-          <button>Send</button>
+  
+        <a>Next</a>
+        <div class="msg">
+          <div class="form_group">
+            <textarea
+              placeholder="Message"
+              id="message"
+              class="form__input"
+              rows="7"
+              formControlName="message"
+              name="message"
+
+            ></textarea>
+            <label for="message" class="form__label">Message</label>
+          </div>
+          <div class="form-btn">
+            <button>Send</button>
+          </div>
         </div>
-      </div>
-      <!-- <div class="shapes"></div> -->
-      <div class="photo">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="blob">
-        <div class="glob"></div>
+        <div class="photo">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="blob">
+          <div class="glob"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
+  
 
   <div class="contact-links">
     <ul>

@@ -16,6 +16,7 @@ import { MiniProjectsComponent } from './projects/mini-projects/mini-projects.co
 import { HomeNameComponent } from './portfolio/home-name/home-name.component';
 import { StarsFallingComponent } from './common-component/stars-falling/stars-falling.component';
 import { SectionHeadingComponent } from './common-component/section-heading/section-heading.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,8 @@ import { SectionHeadingComponent } from './common-component/section-heading/sect
     MatIconModule,
     BrowserAnimationsModule ,
     MatTabsModule ,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

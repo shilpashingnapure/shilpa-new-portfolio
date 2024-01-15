@@ -1,4 +1,4 @@
-@import "~compass-mixins/lib/compass/css3";
+@import "compass-mixins/lib/compass/css3";
 
 @function multiple-box-shadow($n) {
   $value: "#{random(2000)}px #{random(2000)}px #FFF";
