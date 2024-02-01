@@ -17,6 +17,8 @@ import { HomeNameComponent } from './portfolio/home-name/home-name.component';
 import { StarsFallingComponent } from './common-component/stars-falling/stars-falling.component';
 import { SectionHeadingComponent } from './common-component/section-heading/section-heading.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UfoPathComponent } from './common-component/Ufo/ufo-path.component';
+import { UfoComponent } from './common-component/Ufo/ufo/ufo.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MiniProjectsComponent,
     HomeNameComponent,
     StarsFallingComponent,
-    SectionHeadingComponent
+    SectionHeadingComponent ,
+    UfoPathComponent,
+    UfoComponent
   ],
   imports: [
     BrowserModule,

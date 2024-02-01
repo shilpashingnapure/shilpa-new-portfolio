@@ -13,8 +13,8 @@ export class ContactsComponent implements OnInit {
   profileForm : FormGroup; 
   @ViewChild('form') form : ElementRef;
 
-  isChecked=false
-  
+  isclick : boolean = false;
+
   
 
   ngOnInit(): void {
@@ -27,17 +27,15 @@ export class ContactsComponent implements OnInit {
   }
 
 
-  changeSide(){
-    this.isChecked = !this.isChecked
-  }
-
   handleForm(){
-    console.log(this.profileForm)
-    console.log(this.form.nativeElement)
+    this.isclick = true;
     emailjs.sendForm('service_yupt9zh' , 'template_p42s7qy' , this.form.nativeElement , 'zC0fbigrUF0OLNIEh').then((res)=>{
-      console.log(res);
-      this.changeSide()
-      this.profileForm.reset()
+
+      setTimeout(()=>{
+        this.profileForm.reset()
+        this.isclick = false;
+
+      } , 1000)
 
     }).catch((err) => {
       console.log(err)

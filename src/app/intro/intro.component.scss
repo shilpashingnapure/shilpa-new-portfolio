@@ -1,6 +1,7 @@
+
 .intro-section {
   margin: auto;
-  width: 70%;
+  width: 65%;
   position: relative;
   background-color: #fff;
   color: #000;
@@ -28,22 +29,25 @@
     &:after {
       content: "";
       position: absolute;
-      right: -5%;
-      bottom: -13%;
-      width: 200px;
-      height: 200px;
-      background: rgb(38, 49, 72);
-      border-radius: 50%;
+      background-image: url('https://img.freepik.com/premium-vector/rocket-flying-into-outer-space_356740-184.jpg');
+      background-position: center;
+      background-size: contain;
+      right: 0;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      
     }
   }
+
   h2 {
     padding: 20px 0;
     text-align: center;
     margin-left: 25%;
   }
   & > div {
-    display: grid;
-    grid-template-columns: 30% 1fr;
+    display: flex;
+    // grid-template-columns: 30% 1fr;
     gap: 20px;
     padding: 20px 30px;
   }
@@ -54,6 +58,7 @@
     flex-direction: column;
     gap: 10px;
     margin-top: 40px;
+    clear: left;
     .name {
       p {
         margin: 0;
@@ -74,18 +79,25 @@
       p {
         line-height: 1.6em;
       }
-      button {
+      
+      .button {
         border: none;
         padding: 10px;
         cursor: pointer;
         font-weight: bold;
-        width: 250px;
+        width: 200px;
         height: 40px;
         font-family: "Nunito", sans-serif;
         box-shadow: 1px 1px 10px 0px #2222222b;
         transition: 0.2s all;
         background: rgb(38, 49, 72);
         color: #fff;
+        z-index: 2;
+
+        a{
+          color: #fff;
+          font-family: var(--primary-font);
+        }
 
         &:hover {
           box-shadow: 1px 1px 1px 0px #2222222b;
@@ -100,19 +112,48 @@
   }
 
   .profile {
+    flex-basis: 100%;
     padding: 20px;
     float: left;
-    margin-top: -80px;
+    margin-top: -70px;
     background-color: #fff;
     box-shadow: 0px 0px 6px 0px #22222273;
-    height: auto;
+    height: 45vh;
     z-index: 1;
+        
 
     img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      margin-top: -25px;
+      height: 85%;
+      object-position: center;
+      object-fit:cover;
+     
     }
   }
+}
+
+
+
+// media query
+@media only screen and (max-width: 800px) {
+  .intro-section{
+    height: auto;
+
+    & > div{
+      flex-direction: column;
+    }
+
+
+    .circles {
+      
+      &:after {
+        width: 130px;
+        height: 130px;
+        bottom:26%;
+        
+      }
+    }
+    
+  }
+  
 }

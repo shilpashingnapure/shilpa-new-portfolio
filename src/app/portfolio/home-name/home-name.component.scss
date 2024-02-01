@@ -1,5 +1,10 @@
 @import "compass-mixins/lib/compass/css3";
 
+.home{
+  position: relative;
+  height: 100vh;
+}
+
 #horizon {
   position: absolute;
   width: 160%;
@@ -235,5 +240,17 @@
   100% {
     transform: translateY(-4px);
     opacity: 0;
+  }
+}
+
+
+
+// media query
+@media only screen and (max-width: 800px) {
+  #earth{
+    overflow: hidden;
+  }
+  #title{
+    animation: none;
   }
 }

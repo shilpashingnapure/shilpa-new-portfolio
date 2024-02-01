@@ -1,29 +1,37 @@
 <div class="portfolio" id="top">
+  
+  <app-ufo-path class="container"></app-ufo-path>
+
+
   <header [ngClass]="{ show: scrolled }">
-    <ul>
+    <ul >
       <li>
-        <a href="#top">Home</a>
+        <a href="#top" class="nav-link">Home</a>
         <mat-icon>home</mat-icon>
       </li>
       <li>
-        <a href="#about">About</a>
+        <a class="nav-link" href="#about">About</a>
         <mat-icon>person</mat-icon>
       </li>
       <li>
-        <a href="#tech">Tech</a>
+        <a class="nav-link" href="#tech">Tech</a>
         <mat-icon>code</mat-icon>
       </li>
-      <li><a href="#work">Experience</a><mat-icon>work</mat-icon></li>
+      <li><a class="nav-link" href="#work">Experience</a><mat-icon>work</mat-icon></li>
       <li>
-        <a href="#project">Projects</a><mat-icon>developer_mode</mat-icon>
+        <a class="nav-link" href="#project">Projects</a><mat-icon>developer_mode</mat-icon>
       </li>
-      <li><a href="#contact">Contacts</a><mat-icon> contacts</mat-icon></li>
+      <li><a class="nav-link" href="#contact">Contacts</a><mat-icon> contacts</mat-icon></li>
     </ul>
   </header>
-  <app-home-name></app-home-name>
-  <app-intro></app-intro>
-  <app-tech-stack></app-tech-stack>
-  <app-work-experience></app-work-experience>
-  <app-projects></app-projects>
+
+  <app-home-name ></app-home-name>
+  
+
+  <app-intro ></app-intro>
+  <app-tech-stack ></app-tech-stack>
+  <app-work-experience ></app-work-experience>
+  <app-projects ></app-projects>
   <app-contacts></app-contacts>
+
 </div>

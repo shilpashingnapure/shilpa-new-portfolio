@@ -20,39 +20,25 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements OnInit, AfterViewInit {
-  @ViewChild('parentDiv') parentDiv: ElementRef<HTMLDivElement>;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router , private elem: ElementRef) {}
 
   scrolled: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrolled = window.scrollY > 0;
-    // this.snappingAnimation();
+    
+  
+
   }
 
   ngOnInit(): void {
-    // this.snappingAnimation();
   }
 
   ngAfterViewInit(): void {
-    // this.snappingAnimation();
   }
 
-  snappingAnimation() {
-    this.router.events.subscribe((event) => {
-      console.log(event);
-      const tree = this.router.parseUrl(this.router.url);
-      if (tree.fragment) {
-        const element = document.querySelector('#' + tree.fragment);
-        console.log(element);
-        if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 500);
-        }
-      }
-    });
-  }
+
+  
 }
