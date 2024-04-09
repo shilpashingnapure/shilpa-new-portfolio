@@ -368,3 +368,90 @@ $pi: #fe8d58;
     }
   }
 }
+
+
+@media screen and (max-width: 800px) {
+  #contact{
+    // display: none;
+    .contact-container{
+      width: 90%;
+      padding: 0 1rem;
+    }
+    .card{
+      width: 100%;
+      min-width: 100%;
+      height: 300px;
+
+      .blob {
+        .glob{
+          width: 40%;
+          height: 37%;
+          top : -24%;
+          right : -19%;
+        }
+
+        &::before{
+          width:60%;
+          height: 25%;
+          right : -23%;
+          top:-11%;
+        }
+
+      }
+
+      a{
+        width: 30%;
+      }
+
+      .form{
+        width: 90%;
+        left:15px;
+        gap:10px;
+      }
+
+      .msg{
+        .form_group {
+          gap:0;
+        }
+      }
+
+      .form-btn button{
+        padding: .6rem 1.5rem;;
+      }
+
+      & input[type=checkbox]{
+        width: 30%;
+      }
+
+      .form_group .form__input{
+        width: 100%;
+      }
+      textarea{
+        height: 90px;
+      }
+
+      
+    }
+    
+
+    .contact-links{
+      margin: auto;
+      width:100%;
+      top:0;
+      bottom:0;
+      left:50%;
+      display: none;
+      ul{
+        flex-direction: row;
+      }
+      .line{
+        display: none;
+
+      }
+  
+    }
+  }
+ 
+
+  
+}

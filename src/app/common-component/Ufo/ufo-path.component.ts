@@ -30,28 +30,14 @@ export class UfoPathComponent implements OnInit {
     tween.to('.ufo' , {
       left:80 ,
     })
-    // tween.to('.ufo-landing' , {
-    //   keyframes : [
 
-    //     { borderBottomWidth : 10 , opacity : .1},
-    //     {  borderBottomWidth : 100 , opacity : .2} ,
-    //     {  borderBottomWidth : 150 , opacity : .4} ,
-    //     { borderBottom : 200  , opacity : .4}
-    //   ]
-    // })
 
     tween.to('.ufo' , {
-      top : 480 ,
+      top : 550 ,
       transition : 'top 1s ease', 
 
     })
 
-    // tween.to('.ufo-landing' , {
-    //   keyframes : [
-    //     { borderBottom : 100 , opacity : .2}
-    //   ]
-      
-    // } , '<')
     
 
   }
@@ -65,8 +51,6 @@ export class UfoPathComponent implements OnInit {
 
 
     tween.set('.ufo' , {
-      // top: 100, 
-      // left : 50,
       opacity : 0
     })
 

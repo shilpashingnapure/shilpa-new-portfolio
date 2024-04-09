@@ -37,3 +37,28 @@
     }
   }
 }
+
+
+// media query
+@media screen and (max-width: 800px) {
+  #tech{
+    & > div{
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .tech{
+      width:3rem;
+      height:3rem;
+      span{
+        font-size: 12px;
+        }
+    }
+    .tech-stack{
+      gap:2.5rem;
+    }
+  }
+  
+  
+  
+}

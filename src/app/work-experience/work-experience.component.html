@@ -1,10 +1,10 @@
-<div id="work" class="section">
+<div id="work" class="section big-screen">
   <app-section-heading
     large_heading="experience"
     small_heading="My Experience"
   ></app-section-heading>
   <div>
-    <mat-tab-group
+    <mat-tab-group fxLayout="column"
       mat-stretch-tabs="false"
       disableRipple
       mat-align-tabs="start"
@@ -25,8 +25,6 @@
               'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
               'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.',
               'While Troubleshooting backend bugs , gaining hands-on experience in working with PostgreSQL , TypeORM and NestJs and writing test cases.',
-              'Resolved issues within the Supporter App by utilizing react and CSS for frontend fixes.',
-              'Effectively resolved bugs across both frontend and backend.'
             ]
           }"
         >
@@ -76,3 +74,54 @@
     </ul>
   </div>
 </ng-template>
+
+
+<div id="work" class="section small-screen">
+  <app-section-heading
+    large_heading="experience"
+    small_heading="My Experience"
+  ></app-section-heading>
+    <div>
+      <div>
+        <ng-container
+          [ngTemplateOutlet]="workDescription"
+          [ngTemplateOutletContext]="{
+            label: 'Political Data Intelligence',
+            position: 'Associate Full Stack Engineer',
+            date: {
+              start: 'Feb 2023',
+              end: 'Present'
+            },
+            description: [
+              'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
+              'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
+              'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.',
+              'While Troubleshooting backend bugs , gaining hands-on experience in working with PostgreSQL , TypeORM and NestJs and writing test cases.',
+            ]
+          }"
+        >
+        </ng-container>
+      </div>
+      <div>
+        <ng-container
+          [ngTemplateOutlet]="workDescription"
+          [ngTemplateOutletContext]="{
+            label: 'Masai School',
+            position: 'Instructional Associate',
+            date: {
+              start: 'April 2022',
+              end: 'Feb 2023'
+            },
+            description: [
+              'Helping students in solving conceptual doubts via stand-up’s & pair programming sessions.',
+              'Building communication between students & instructor.',
+              'Mentoring students in the field of web development.',
+              'Reviewing projects, portfolios and taking mock interviews to help students.',
+              'Delivering lectures and PSC whenever needed.'
+            ]
+          }"
+        >
+        </ng-container>
+      </div>
+    </div>
+</div>

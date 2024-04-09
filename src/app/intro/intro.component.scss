@@ -135,9 +135,10 @@
 
 
 // media query
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .intro-section{
     height: auto;
+    width: 90%;
 
     & > div{
       flex-direction: column;
@@ -147,12 +148,14 @@
     .circles {
       
       &:after {
-        width: 130px;
-        height: 130px;
-        bottom:26%;
+        width: 8rem;
+        height: 8rem;
+        bottom:40%;
         
       }
     }
+
+   
     
   }
   

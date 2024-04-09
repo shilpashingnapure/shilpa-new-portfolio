@@ -246,11 +246,21 @@
 
 
 // media query
-@media only screen and (max-width: 800px) {
-  #earth{
-    overflow: hidden;
+@media screen and (max-width: 800px) {
+  #earth , #horizon{
+    display: none;
   }
   #title{
     animation: none;
+    font-size: 40px;
+    top:50%;
+    
   }
+
+  #subtitle{
+    font-size: 15px;
+    top: 55%;
+  }
+
+  
 }

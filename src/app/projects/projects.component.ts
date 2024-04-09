@@ -13,10 +13,12 @@ export class ProjectsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.porjectAnimation();
+      this.porjectAnimation();
+    
   }
 
   porjectAnimation() {
+
     gsap.from('#project-1', {
       scrollTrigger: {
         trigger: '#project-1',
