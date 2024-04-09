@@ -24,6 +24,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   constructor(private router: Router , private elem: ElementRef) {}
 
   scrolled: boolean = false;
+  isOpen : boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -37,6 +38,17 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+  }
+
+  // this function is responsive
+  handleToggle(){
+    this.isOpen = !this.isOpen;
+  }
+
+  goTopage(){
+    if(this.isOpen){
+      this.isOpen = false;
+    }
   }
 
 

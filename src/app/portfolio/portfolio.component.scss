@@ -36,6 +36,10 @@ header {
     opacity: 1;
   }
 
+  .toggle{
+    display: none;
+  }
+
   ul {
     display: flex;
     gap: 20px;
@@ -45,10 +49,12 @@ header {
 
     li {
       display: flex;
-      gap: 3px;
+      align-items: center;
+      gap: 4px;
 
       mat-icon {
         font-size: 18px;
+        margin-top: 5px;
       }
       a {
         color: inherit;
@@ -69,7 +75,106 @@ header {
 // media query
 @media screen and (max-width: 800px) {
   header{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    .toggle{
+      width: 50px;
+      height: 50px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      position:fixed;
+      right: 20px;
+      top:20px;
+      display: block;
+      z-index:2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      // menu bar
+      span{
+        position: relative;
+        width: 60%;
+        &::before , &::after{
+          content: '';
+          position: absolute;
+          left:0;
+          width: 100%;
+        }
+
+        & , &::before , &::after{
+          height: 2px;
+          background: #000;
+          display: inline-block;
+          transition: all .2s;
+        }
+
+        &:before{
+          top:-.5rem;
+        }
+        &:after{
+          top:.5rem;
+        }
+      }
+      
+
+    }
+    .toggle-active.toggle{
+      span{
+        background-color: transparent;
+        &:before{
+          top:0;
+          transform:rotate(135deg);
+        }
+        &:after{
+          top:0;
+          transform:rotate(-135deg);
+        }
+      }
+    }
+
+    .navigation__background{
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-image: radial-gradient(rgb(33 , 41 , 60), rgba(7 , 13 , 17 , 1));
+      z-index: 1000;
+      transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    .active.navigation__background{
+      transform: scale(80);
+    }
+    
+    ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top:50%;
+      left: 0;
+      z-index:1500;
+      opacity: 0;
+      width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      margin: 0;
+      font-size: 20px;
+      transform: translate(-50% , -50%);
+    }
+
+    .active + ul{
+      opacity: 1;
+      width: 100%;
+      left: 50%;
+      
+    }
   }
   .portfolio{
     display: flex;

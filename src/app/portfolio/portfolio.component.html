@@ -3,24 +3,28 @@
   <app-ufo-path class="container"></app-ufo-path>
 
   <header [ngClass]="{ show: scrolled }">
-    <ul >
-      <li>
+    <button [ngClass]="{ 'toggle-active' : isOpen , 'toggle' : true }" (click)="handleToggle()">
+      <span></span>
+    </button>
+    <div [ngClass]="{ 'active' : isOpen , 'navigation__background' : true }"  ></div>
+    <ul [ngClass]="{ 'open' : isOpen }">
+      <li (click)="goTopage()">
         <a href="#top" class="nav-link">Home</a>
         <mat-icon>home</mat-icon>
       </li>
-      <li>
+      <li (click)="goTopage()">
         <a class="nav-link" href="#about">About</a>
         <mat-icon>person</mat-icon>
       </li>
-      <li>
+      <li (click)="goTopage()">
         <a class="nav-link" href="#tech">Tech</a>
         <mat-icon>code</mat-icon>
       </li>
-      <li><a class="nav-link" href="#work">Experience</a><mat-icon>work</mat-icon></li>
-      <li>
+      <li (click)="goTopage()"><a class="nav-link" href="#work">Experience</a><mat-icon>work</mat-icon></li>
+      <li (click)="goTopage()">
         <a class="nav-link" href="#project">Projects</a><mat-icon>developer_mode</mat-icon>
       </li>
-      <li><a class="nav-link" href="#contact">Contacts</a><mat-icon> contacts</mat-icon></li>
+      <li (click)="goTopage()"><a class="nav-link" href="#contact">Contacts</a><mat-icon> contacts</mat-icon></li>
     </ul>
   </header>
 
