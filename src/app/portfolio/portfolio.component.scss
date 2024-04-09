@@ -72,8 +72,9 @@ header {
     display: none;
   }
   .portfolio{
-    grid-template-rows: auto;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
   }
   .container {
      display: none;

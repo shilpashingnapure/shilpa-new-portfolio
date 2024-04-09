@@ -142,17 +142,25 @@
 
     & > div{
       flex-direction: column;
+      gap:30px;
     }
 
 
     .circles {
+      padding:20px;
       
       &:after {
         width: 8rem;
         height: 8rem;
-        bottom:40%;
+        bottom:27%;
+        z-index:-1;
         
       }
+    }
+
+    .about{
+      padding: 0;
+      margin: 0;
     }
 
    

@@ -212,6 +212,7 @@
   #project {
     & .top-projects{
       height: auto;
+      margin-bottom: 5rem;
     }
 
     .animation {
@@ -230,12 +231,14 @@
 
 
       .project-img {
-        border: 1px solid #fff;
+        height: 25vh;
         
         img{
           width:100%;
           height: 100%;
           display: none;
+          object-fit: fill;
+          object-position: center;
         }
         img:first-child{
           display: block;
