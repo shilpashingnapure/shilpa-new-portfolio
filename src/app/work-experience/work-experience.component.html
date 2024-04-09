@@ -1,9 +1,9 @@
-<div id="work" class="section big-screen">
+<div id="work" class="section">
   <app-section-heading
     large_heading="experience"
     small_heading="My Experience"
   ></app-section-heading>
-  <div>
+  <div class="big-screen">
     <mat-tab-group fxLayout="column"
       mat-stretch-tabs="false"
       disableRipple
@@ -51,6 +51,46 @@
       </mat-tab>
     </mat-tab-group>
   </div>
+  <div class="small-screen">
+    <div class="scroll-section">
+      <ng-container
+        [ngTemplateOutlet]="workDescription"
+        [ngTemplateOutletContext]="{
+          label: 'Political Data Intelligence',
+          position: 'Associate Full Stack Engineer',
+          date: {
+            start: 'Feb 2023',
+            end: 'Jan 2024'
+          },
+          description: [
+            'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
+            'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
+            'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.'
+          ]
+        }"
+      >
+      </ng-container>
+      <ng-container
+        [ngTemplateOutlet]="workDescription"
+        [ngTemplateOutletContext]="{
+          label: 'Masai School',
+          position: 'Instructional Associate',
+          date: {
+            start: 'April 2022',
+            end: 'Feb 2023'
+          },
+          description: [
+            'Helping students in solving conceptual doubts via stand-up’s & pair programming sessions.',
+            'Building communication between students & instructor.',
+            'Mentoring students in the field of web development.',
+            'Reviewing projects, portfolios and taking mock interviews to help students.',
+          ]
+        }"
+      >
+      </ng-container>
+  </div>
+  </div>
+  
 </div>
 
 <ng-template
@@ -72,50 +112,3 @@
     </ul>
   </div>
 </ng-template>
-
-
-
-<!--  this is for small screen -->
-<div id="work" class="section small-screen">
-  <app-section-heading
-    large_heading="experience"
-    small_heading="My Experience"
-  ></app-section-heading>
-    <div class="scroll-section">
-        <ng-container
-          [ngTemplateOutlet]="workDescription"
-          [ngTemplateOutletContext]="{
-            label: 'Political Data Intelligence',
-            position: 'Associate Full Stack Engineer',
-            date: {
-              start: 'Feb 2023',
-              end: 'Jan 2024'
-            },
-            description: [
-              'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
-              'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
-              'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.'
-            ]
-          }"
-        >
-        </ng-container>
-        <ng-container
-          [ngTemplateOutlet]="workDescription"
-          [ngTemplateOutletContext]="{
-            label: 'Masai School',
-            position: 'Instructional Associate',
-            date: {
-              start: 'April 2022',
-              end: 'Feb 2023'
-            },
-            description: [
-              'Helping students in solving conceptual doubts via stand-up’s & pair programming sessions.',
-              'Building communication between students & instructor.',
-              'Mentoring students in the field of web development.',
-              'Reviewing projects, portfolios and taking mock interviews to help students.',
-            ]
-          }"
-        >
-        </ng-container>
-    </div>
-</div>
