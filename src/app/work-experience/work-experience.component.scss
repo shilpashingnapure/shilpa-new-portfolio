@@ -46,18 +46,20 @@
     }
   }
 }
-.small-screen{
+.small-screen {
   display: none;
 }
-
 
 @media only screen and (max-width: 800px) {
   .big-screen {
     display: none;
   }
-  .small-screen{
+  .small-screen {
     display: block;
+
+   
   }
+  
   #work{
     & > div{
       width: 100%;
@@ -83,5 +85,4 @@
     }
 
   }
-  
 }

@@ -24,7 +24,6 @@
               'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
               'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
               'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.',
-              'While Troubleshooting backend bugs , gaining hands-on experience in working with PostgreSQL , TypeORM and NestJs and writing test cases.',
             ]
           }"
         >
@@ -45,7 +44,6 @@
               'Building communication between students & instructor.',
               'Mentoring students in the field of web development.',
               'Reviewing projects, portfolios and taking mock interviews to help students.',
-              'Delivering lectures and PSC whenever needed.'
             ]
           }"
         >
@@ -76,13 +74,14 @@
 </ng-template>
 
 
+
+<!--  this is for small screen -->
 <div id="work" class="section small-screen">
   <app-section-heading
     large_heading="experience"
     small_heading="My Experience"
   ></app-section-heading>
-    <div>
-      <div>
+    <div class="scroll-section">
         <ng-container
           [ngTemplateOutlet]="workDescription"
           [ngTemplateOutletContext]="{
@@ -95,14 +94,11 @@
             description: [
               'Worked extensively in Angular 14 , HTML , SCSS and GraphQL to develop various features.',
               'Developed the ‘Approve/Canvasser’ Detail page , effectively displaying canvasser survey details with used of Akita store for efficient data handling.',
-              'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.',
-              'While Troubleshooting backend bugs , gaining hands-on experience in working with PostgreSQL , TypeORM and NestJs and writing test cases.',
+              'Developed the ‘Manage Canvassing Project’ page utilizing SCSS Angular Material UI and GraphQL API across all web pages.'
             ]
           }"
         >
         </ng-container>
-      </div>
-      <div>
         <ng-container
           [ngTemplateOutlet]="workDescription"
           [ngTemplateOutletContext]="{
@@ -117,11 +113,9 @@
               'Building communication between students & instructor.',
               'Mentoring students in the field of web development.',
               'Reviewing projects, portfolios and taking mock interviews to help students.',
-              'Delivering lectures and PSC whenever needed.'
             ]
           }"
         >
         </ng-container>
-      </div>
     </div>
 </div>
