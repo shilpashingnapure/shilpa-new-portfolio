@@ -372,7 +372,8 @@ $pi: #fe8d58;
 
 @media screen and (max-width: 800px) {
   #contact{
-    // display: none;
+    background: transparent;
+    padding: 0;
     .contact-container{
       width: 90%;
       padding: 0 1rem;
@@ -435,14 +436,21 @@ $pi: #fe8d58;
     
 
     .contact-links{
-      margin: auto;
-      width:100%;
+      position: relative;
+      left: 0;
       top:0;
-      bottom:0;
-      left:50%;
-      display: none;
+      margin: auto;
+      height: 12vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      background: #253047;
+
+      
       ul{
         flex-direction: row;
+        gap:20px;
       }
       .line{
         display: none;
