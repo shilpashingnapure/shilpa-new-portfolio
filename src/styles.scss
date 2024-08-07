@@ -35,12 +35,18 @@ a{
   cursor: pointer;
 }
 
+// popup to show over the content
+.cdk-global-scrollblock{
+  overflow-y:  visible !important;
+}
+
 // custom css for matrial components
 
 .mat-tab-group {
   min-height: 40vh;
   display: grid !important;
   grid-template-columns: 300px 1fr !important;
+  font-family: var(--primary-font);
 
   .mat-tab-label {
     padding: 30px 40px;
@@ -48,6 +54,7 @@ a{
     font-weight: 300;
     font-size: 20px;
     color: #fff;
+    font-family: var(--primary-font);
   }
 
   .mat-tab-label-active {

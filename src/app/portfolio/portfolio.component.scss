@@ -1,6 +1,7 @@
 .portfolio {
   display: grid;
-  grid-template-rows: repeat(4, 100vh) auto auto;
+  grid-template-rows: repeat(6, auto);
+  gap:12rem;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: relative;

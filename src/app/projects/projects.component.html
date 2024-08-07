@@ -5,161 +5,62 @@
     small_heading="Top Projects"
   ></app-section-heading>
 
-  <div class="top-projects animation">
-    <div class="project-container">
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Mailchimp Clone',
-          stack: [
-            'react.png',
-            'node.webp',
-            'mongodb.png',
-            'html.png',
-            'css.png',
-            'js.png'
-          ],
-          img: ['mailchimp2.PNG', 'mailchimp1.PNG', 'mailchimp3.PNG'],
-          link: {
-            visit: 'https://mailchimp-frontend.vercel.app/',
-            github: 'https://github.com/shilpashingnapure/Clone-of-Mailchimp',
-            demo: 'https://player.vimeo.com/video/756101155?h=e6e013b7d8'
-          },
-          description:
-            'Mailchimp is a marketing automation platform and email marketing service. we tried to implement the features are create new email and customize existing email templates, Send templates through email and keep records of email sending, Can do email marking to multiple users. Team of 6 Members.'
-        }"
-      ></ng-container>
-    </div>
-    <div class="project-container" id="project-1">
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Theory Clone',
-          stack: [
-            'react.png',
-            'node.webp',
-            'mongodb.png',
-            'html.png',
-            'css.png',
-            'js.png'
-          ],
-          img: ['theory3.png', 'theory1.png', 'theory2.png'],
-          link: {
-            visit: 'https://theroybackend.onrender.com/',
-            github: 'https://github.com/shilpashingnapure/Theory_Clone-Backend',
-            demo: 'https://player.vimeo.com/video/689858338?h=1e538fdf27'
-          },
-          description:
-            'New York fashion brand “Theory” is based on women’s and men’s contemporary fashion label. We tried to implement E-commerce functionalities product database, Add to cart, search, admin page, Authorization, Payment, OTP verification using Gmail API, etc. Won 1 rank amongst 70+ projects. Team of 5 members.'
-        }"
-      ></ng-container>
-    </div>
-    <div class="project-container" id="project-2">
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Forest Essentials India Clone',
-          stack: ['html.png', 'css.png', 'js.png'],
-          img: ['forest-2.PNG', 'forest-1.gif', 'forest-3.png'],
-          link: {
-            visit: 'https://shilpashingnapure.github.io/forestessentialsindia/',
-            github:
-              'https://github.com/shilpashingnapure/forestessentialsindia',
-            demo: 'https://player.vimeo.com/video/689858253?h=1744dc5262'
-          },
-          description:
-            'Forest Essentials is an Indian cosmetics, skincare and perfume company that specialize in Ayurvedic preparations for its products. We implement basic e-commarce all functionalites. buy products ,add to cart , payment getway funtionalites etc. we are 2nd rank holder amongst 100+ projects. Team of 6 Members.'
-        }"
-      ></ng-container>
-    </div>
-  </div>
-  <div class="top-projects non-animation">
-    <div class="project-container">
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Mailchimp Clone',
-          stack: [
-            'react.png',
-            'node.webp',
-            'mongodb.png',
-            'html.png',
-            'css.png',
-            'js.png'
-          ],
-          img: ['mailchimp2.PNG', 'mailchimp1.PNG', 'mailchimp3.PNG'],
-          link: {
-            visit: 'https://mailchimp-frontend.vercel.app/',
-            github: 'https://github.com/shilpashingnapure/Clone-of-Mailchimp',
-            demo: 'https://player.vimeo.com/video/756101155?h=e6e013b7d8'
-          },
-          description:
-            'Mailchimp is a marketing automation platform and email marketing service. we tried to implement the features are create new email and customize existing email templates, Send templates through email and keep records of email sending, Can do email marking to multiple users. Team of 6 Members.'
-        }"
-      ></ng-container>
+  <div class="top-projects">
+    <div class="animation">
+      <div
+        *ngFor="let project of topThreeProjects; let i = index"
+        class="project-card"
+        id="project-{{ i }}"
+      >
+        <ng-container
+          [ngTemplateOutlet]="projectCard"
+          [ngTemplateOutletContext]="project"
+        ></ng-container>
+      </div>
     </div>
 
-    <div class="project-container" >
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Theory Clone',
-          stack: [
-            'react.png',
-            'node.webp',
-            'mongodb.png',
-            'html.png',
-            'css.png',
-            'js.png'
-          ],
-          img: ['theory3.png', 'theory1.png', 'theory2.png'],
-          link: {
-            visit: 'https://theroybackend.onrender.com/',
-            github: 'https://github.com/shilpashingnapure/Theory_Clone-Backend',
-            demo: 'https://player.vimeo.com/video/689858338?h=1e538fdf27'
-          },
-          description:
-            'New York fashion brand “Theory” is based on women’s and men’s contemporary fashion label. We tried to implement E-commerce functionalities product database, Add to cart, search, admin page, Authorization, Payment, OTP verification using Gmail API, etc. Won 1 rank amongst 70+ projects. Team of 5 members.'
-        }"
-      ></ng-container>
-    </div>
-    <div class="project-container">
-      <ng-container
-        [ngTemplateOutlet]="project"
-        [ngTemplateOutletContext]="{
-          name: 'Forest Essentials India Clone',
-          stack: ['html.png', 'css.png', 'js.png'],
-          img: ['forest-2.PNG', 'forest-1.gif', 'forest-3.png'],
-          link: {
-            visit: 'https://shilpashingnapure.github.io/forestessentialsindia/',
-            github:
-              'https://github.com/shilpashingnapure/forestessentialsindia',
-            demo: 'https://player.vimeo.com/video/689858253?h=1744dc5262'
-          },
-          description:
-            'Forest Essentials is an Indian cosmetics, skincare and perfume company that specialize in Ayurvedic preparations for its products. We implement basic e-commarce all functionalites. buy products ,add to cart , payment getway funtionalites etc. we are 2nd rank holder amongst 100+ projects. Team of 6 Members.'
-        }"
-      ></ng-container>
+    <div class="non-animation">
+      <div
+        *ngFor="let project of topThreeProjects; let i = index"
+        class="project-card"
+      >
+        <ng-container
+          [ngTemplateOutlet]="projectCard"
+          [ngTemplateOutletContext]="project"
+        ></ng-container>
+      </div>
     </div>
   </div>
-  
+ 
 
   <app-mini-projects></app-mini-projects>
 </div>
 
 <ng-template
-  #project
+  #projectCard
   let-name="name"
   let-description="description"
-  let-stack="stack"
-  let-img="img"
+  let-stack="techStack"
+  let-imgs="imgs"
   let-link="link"
 >
-  <div class="project-description">
-    <h1>{{ name }}</h1>
-    <p>
-      {{ description }}
-    </p>
+  <!-- project description -->
+  <div class="project-content">
+    <div class="project-about">
+      <h1>{{ name }}</h1>
+      <div class="description">
+        <p>{{ description.intro }}</p>
+        <div>
+          <h5 class="sub-header">Features</h5>
+          <ul>
+            <li *ngFor="let f of description?.features">
+              {{ f }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="project-stack">
       <ng-container *ngFor="let icon of stack">
         <img src="./assets/Tech/{{ icon }}" />
@@ -167,21 +68,27 @@
     </div>
     <div class="project-links">
       <button class="btn">
-        <a href="{{ link?.visit }}" target="_blank">
-          Visit Site
-        </a>
+        <a href="{{ link?.visit }}" target="_blank"> Website </a>
       </button>
       <button class="btn">
         <a href="{{ link?.github }}" target="_blank">Github</a>
       </button>
-      <button class="btn">
+      <button class="btn" *ngIf="link?.demo">
         <a href="{{ link?.demo }}" target="_blank">Demo</a>
       </button>
     </div>
   </div>
+  <!-- project image -->
   <div class="project-img">
-    <img src="./assets/projects/{{ img[0] }}" class="img-1" />
-    <img src="./assets/projects/{{ img[1] }}" class="img-2" />
-    <img src="./assets/projects/{{ img[2] }}" class="img-3" />
+    <div class="multiple-imgs" *ngIf="imgs.length > 1; else singleImg">
+      <div *ngFor="let img of imgs; let i = index" class="img-{{ i + 1 }}">
+        <img src="./assets/projects/{{ img }}" />
+      </div>
+    </div>
+    <ng-template #singleImg>
+      <div class="single-img">
+        <img src="./assets/projects/{{ imgs[0] }}" />
+      </div>
+    </ng-template>
   </div>
 </ng-template>

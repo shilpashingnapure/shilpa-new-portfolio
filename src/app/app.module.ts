@@ -7,7 +7,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { IntroComponent } from './intro/intro.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -19,6 +18,10 @@ import { SectionHeadingComponent } from './common-component/section-heading/sect
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UfoPathComponent } from './common-component/Ufo/ufo-path.component';
 import { UfoComponent } from './common-component/Ufo/ufo/ufo.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogContentComponent } from './common-component/dialog-content/dialog-content.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { UfoComponent } from './common-component/Ufo/ufo/ufo.component';
     StarsFallingComponent,
     SectionHeadingComponent ,
     UfoPathComponent,
-    UfoComponent
+    UfoComponent,
+    DialogContentComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,9 +47,10 @@ import { UfoComponent } from './common-component/Ufo/ufo/ufo.component';
     BrowserAnimationsModule ,
     MatTabsModule ,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

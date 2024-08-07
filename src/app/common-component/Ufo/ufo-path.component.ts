@@ -33,7 +33,7 @@ export class UfoPathComponent implements OnInit {
 
 
     tween.to('.ufo' , {
-      top : 550 ,
+      top : 900 ,
       transition : 'top 1s ease', 
 
     })
@@ -53,6 +53,7 @@ export class UfoPathComponent implements OnInit {
     tween.set('.ufo' , {
       opacity : 0
     })
+    
 
     
     // add animation along with motion path

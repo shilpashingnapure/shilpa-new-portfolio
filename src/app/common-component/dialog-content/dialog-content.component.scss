@@ -1,0 +1,33 @@
+.dialog-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .dialog-container{
+        flex: 1;
+    }
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    h1{
+        font-size: 18px;
+    }
+
+    button{
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        padding: .5rem 1rem;
+        font-family: "Nunito", sans-serif;
+        box-shadow: 1px 1px 10px 0px #2222222b;
+        transition: 0.2s all;
+        background: rgb(38, 49, 72);
+        color: #fff;
+        z-index: 2;
+        
+    }
+}
