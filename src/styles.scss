@@ -16,7 +16,6 @@ body {
   scroll-behavior: smooth;
   scroll-padding: 8rem;
   height: 100%;
- 
 }
 
 body {
@@ -26,18 +25,35 @@ body {
   font-family: var(--primary-font);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   overflow-x: hidden;
-  
 }
 
-
-a{
+a {
   text-decoration: none;
   cursor: pointer;
 }
 
 // popup to show over the content
-.cdk-global-scrollblock{
-  overflow-y:  visible !important;
+.cdk-global-scrollblock {
+  overflow-y: visible !important;
+}
+
+.cdk-overlay-dark-backdrop {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ) !important; /* Adjust the RGBA value as needed */
+}
+
+.custom-dialog-container .mat-dialog-container{
+  overflow:  hidden !important;
+}
+.custom-dialog-container {
+  .mat-dialog-content {
+    max-height: 80vh !important;
+    overflow: hidden !important;
+  }
 }
 
 // custom css for matrial components
@@ -88,20 +104,17 @@ a{
   }
 }
 
-
 @media only screen and (max-width: 800px) {
   body {
     font-size: 10px;
     overflow-x: hidden;
-
   }
-
 
   // mat-tab.group
 
   .mat-tab-group {
     display: flex !important;
-  
+
     .mat-tab-label-active {
       position: relative;
       &:before {
@@ -113,15 +126,17 @@ a{
     }
     .mat-tab-body-active {
       border-top: 1px solid #fff;
-      border-left:none;
+      border-left: none;
     }
 
     .mat-tab-labels {
       flex-direction: row !important;
       height: 100%;
     }
-    
   }
-  
 
+
+  .custom-dialog-container{
+    height: auto !important;
+  }
 }

@@ -21,6 +21,8 @@ import { UfoComponent } from './common-component/Ufo/ufo/ufo.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogContentComponent } from './common-component/dialog-content/dialog-content.component';
+import { CertificatesComponent } from './certificates/certificates.component';
+import { CustomCarouselComponent } from './common-component/custom-carousel/custom-carousel.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { DialogContentComponent } from './common-component/dialog-content/dialog
     UfoPathComponent,
     UfoComponent,
     DialogContentComponent,
+    CertificatesComponent,
+    CustomCarouselComponent,
   ],
   imports: [
     BrowserModule,

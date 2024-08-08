@@ -1,0 +1,32 @@
+<div id="certificates" class="section">
+  <app-section-heading
+    large_heading="certificates"
+    small_heading="My certificates"
+  ></app-section-heading>
+  <div class="certificates-section">
+    <app-custom-carousel>
+      <ng-template #card *ngFor="let certi of certificates; let i = index">
+        <div class="card" (click)="fullView(i)">
+          <img src="./assets/{{ certi?.img }}" />
+        </div>
+      </ng-template>
+    </app-custom-carousel>
+  </div>
+</div>
+
+<ng-template #fullImg>
+  <div class="dialog-container">
+    <button mat-icon-button class="close-button" (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-dialog-content>
+      <div class="img-div">
+        <img src="./assets/{{ certificates[currentImg]?.img }}" />
+        <a href="{{ certificates[currentImg]?.link }}" class="link" *ngIf="certificates[currentImg]?.link" target="_blank">
+            Go to Digitial link 
+            
+        </a>
+      </div>
+    </mat-dialog-content>
+  </div>
+</ng-template>

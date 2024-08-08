@@ -22,7 +22,14 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   topThreeProjects = [
     {
       name: 'Instagram Clone',
-      techStack: ['react.png', 'ts.png' , 'node.webp', 'express.webp', 'postgresql.png' , 'tailwind.png'],
+      techStack: [
+        'react.png',
+        'ts.png',
+        'node.webp',
+        'express.webp',
+        'postgresql.png',
+        'tailwind.png',
+      ],
       imgs: ['dialog-post.png', 'insta-feed.png', 'insta-profile.png'],
       link: {
         visit: 'https://photo-grammm.vercel.app/',
@@ -92,7 +99,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   projectCardAnimation() {
     let cumulativeHeight = 0;
     this.projectCards.forEach((card, index) => {
-
       const cardElement = card.nativeElement;
       const cardId = `#project-${index + 1}`;
 
@@ -101,19 +107,21 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
       cumulativeHeight += cardElement.offsetHeight;
 
-      gsap.from(cardId, {
-        scrollTrigger: {
-          trigger: cardId,
-          start: '20% center',
-          end: 'bottom',
-          scrub: true,
-          toggleActions: 'restart',
-        },
-        rotationX: 180,
-        x: 5,
-        opacity: 0.7,
-        duration: 1,
-      });
+      if (index + 1 < this.projectCards.length) {
+        gsap.from(cardId, {
+          scrollTrigger: {
+            trigger: cardId,
+            start: '20% center',
+            end: 'bottom',
+            scrub: true,
+            toggleActions: 'restart',
+          },
+          rotationX: 180,
+          x: 5,
+          opacity: 0.7,
+          duration: 1,
+        });
+      }
     });
   }
 }

@@ -1,0 +1,15 @@
+<!-- carousel -->
+<div class="carousel-container">
+    <button class="prev-button" (click)="prevSlide()">
+        <mat-icon class="icon">arrow_back_ios</mat-icon>
+    </button>
+    <!-- wrappwe -->
+    <div class="carousel-wrapper" >
+       <div class="carousel-slide" *ngFor="let content of carouselContents; let i = index">
+          <ng-container *ngTemplateOutlet="content"></ng-container>
+       </div>
+    </div>
+    <button class="next-button" (click)="nextSlide()">
+        <mat-icon class="icon">arrow_forward_ios</mat-icon>
+    </button>
+  </div>
