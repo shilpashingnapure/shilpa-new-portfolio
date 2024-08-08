@@ -155,7 +155,6 @@ export class MiniProjectsComponent implements OnInit {
 
 
   openDialog(videoLink : string){
-    console.log(videoLink);
     this.dialog.open(DialogContentComponent , {
       width : '650px',
       height : '500px' ,

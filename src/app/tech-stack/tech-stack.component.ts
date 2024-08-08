@@ -34,6 +34,10 @@ export class TechStackComponent implements OnInit {
       icon: 'nestjs.png',
     },
     {
+      name : 'Express.js' , 
+      icon : 'express.webp'
+    },
+    {
       name: 'HTML',
       icon: 'html.png',
     },
@@ -69,6 +73,10 @@ export class TechStackComponent implements OnInit {
       name: 'Bootstrap',
       icon: 'bootstrap.svg',
     },
+    {
+      name : 'Tailwind' , 
+      icon : 'tailwind.png',
+    }
   ];
 
   ngOnInit(): void {}

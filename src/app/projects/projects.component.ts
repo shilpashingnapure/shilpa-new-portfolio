@@ -1,4 +1,11 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -10,21 +17,13 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
-  constructor() {}
-
-  ngOnInit(): void {
-    // this.porjectAnimation();
-  }
-
-  ngAfterViewInit(): void {
-    this.porjectAnimation();
-  }
+  @ViewChildren('card') projectCards: QueryList<ElementRef>;
 
   topThreeProjects = [
     {
       name: 'Instagram Clone',
-      techStack: ['react.png', 'html.png', 'css.png', 'js.png', 'ts.png'],
-      imgs: ['dialog-post.png' , 'insta-feed.png' , 'insta-profile.png'],
+      techStack: ['react.png', 'ts.png' , 'node.webp', 'express.webp', 'postgresql.png' , 'tailwind.png'],
+      imgs: ['dialog-post.png', 'insta-feed.png', 'insta-profile.png'],
       link: {
         visit: 'https://photo-grammm.vercel.app/',
         github: 'https://github.com/shilpashingnapure/instagram_clone',
@@ -37,9 +36,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           'sign up / login',
           'upload/delete post , comment',
           'like the posts',
-          'user profile management , search for users'
+          'user profile management , search for users',
         ],
-      }
+      },
     },
     {
       name: 'Snakes & Ladders Game',
@@ -60,7 +59,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           'move pieces based on dice rolls dynamically',
           'for dice 6 , player gets play again upto 3 extra turns',
         ],
-      }
+      },
     },
     {
       name: '2048 Game',
@@ -77,39 +76,44 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         features: [
           'Game board can initialize dynamically',
           'dynamically winning number & base number',
-          'start/restart game'
+          'start/restart game',
         ],
-      }
+      },
     },
   ];
+  constructor() {}
 
+  ngOnInit(): void {}
 
+  ngAfterViewInit(): void {
+    this.projectCardAnimation();
+  }
 
-  porjectAnimation() {
-    gsap.from('#project-1', {
-      scrollTrigger: {
-        trigger: '#project-1',
-        start: '40% center',
-        scrub: true,
-        toggleActions: 'restart',
-      },
-      rotationX: 180,
-      x: 5,
-      opacity: 0.7,
-      duration: 1,
-    });
+  projectCardAnimation() {
+    let cumulativeHeight = 0;
+    this.projectCards.forEach((card, index) => {
 
-    gsap.from('#project-2', {
-      scrollTrigger: {
-        trigger: '#project-2',
-        start: '40% center',
-        scrub: true,
-        toggleActions: 'restart',
-      },
-      rotationX: 180,
-      x: 5,
-      opacity: 0.7,
-      duration: 1,
+      const cardElement = card.nativeElement;
+      const cardId = `#project-${index + 1}`;
+
+      // to get previous card height
+      cardElement.style.top = `${cumulativeHeight}px`;
+
+      cumulativeHeight += cardElement.offsetHeight;
+
+      gsap.from(cardId, {
+        scrollTrigger: {
+          trigger: cardId,
+          start: '20% center',
+          end: 'bottom',
+          scrub: true,
+          toggleActions: 'restart',
+        },
+        rotationX: 180,
+        x: 5,
+        opacity: 0.7,
+        duration: 1,
+      });
     });
   }
 }

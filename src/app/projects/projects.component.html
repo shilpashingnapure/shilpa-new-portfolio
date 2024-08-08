@@ -11,6 +11,7 @@
         *ngFor="let project of topThreeProjects; let i = index"
         class="project-card"
         id="project-{{ i }}"
+        #card
       >
         <ng-container
           [ngTemplateOutlet]="projectCard"
