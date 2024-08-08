@@ -305,11 +305,13 @@
     & .top-projects {
       height: auto;
       margin-bottom: 5rem;
+
+      .animation {
+        display: none;
+      }
     }
 
-    .animation {
-      display: none;
-    }
+    
     .non-animation {
       display: flex;
       flex-direction: column;
@@ -317,11 +319,15 @@
       width: 100%;
       padding: 0;
 
+      .project-stack{
+        margin: auto;
+      }
+
       .project-img {
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain; 
           object-position: center;
         }
         .multiple-imgs {
@@ -329,9 +335,15 @@
             display: none;
           }
 
-          & .img-1 {
+          & .img-2 {
             display: block;
           }
+        }
+
+        .single-img{
+          width: 20rem;
+          height: 15rem;
+
         }
       }
     }
