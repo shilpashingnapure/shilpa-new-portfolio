@@ -1,3 +1,46 @@
+.container {
+  position: relative;
+
+  &:hover {
+    .prev-button,
+    .next-button {
+      display: flex;
+    }
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border-radius: 50%;
+    display: none;
+
+    & .icon {
+      font-size: 2rem;
+      margin-top: -0.5rem;
+    }
+  }
+  .prev-button {
+    left: 3rem;
+  }
+
+  .next-button {
+    right: 2rem;
+  }
+}
+
 .mini-projects {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 10%;
@@ -57,7 +100,7 @@
       border-radius: 0.75rem;
       object-fit: contain;
       position: absolute;
-      top:0;      
+      top: 0;
     }
   }
 
@@ -77,23 +120,22 @@
       background: rgba(226, 232, 240, 0.7);
     }
   }
-  
 
   .project-btns {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 1rem;
-    button{
+    button {
       border: none;
-      background : #fff;
+      background: #fff;
       width: 1.2rem;
       height: 1.2rem;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    span{
+    span {
       width: 1.2rem;
       height: 1.2rem;
       display: flex;
@@ -114,28 +156,47 @@
   }
 }
 
-
 @media screen and (max-width: 800px) {
-  .mini-projects{
+  .container {
+    .prev-button,
+    .next-button {
+      display: flex;
+      border:1px solid black;
+      top:104%;
+      left:50%;
+      
+    }
+
+    .prev-button{
+      left: 35%;
+    }
+    .next-button{
+      left: 55%;
+      
+    }
+   
+  }
+
+  .mini-projects {
     padding: 2rem;
   }
-  .project-card{
+  .project-card {
     padding: 10px;
     width: 18rem;
 
-    .tech-stack{
-      gap:.5rem;
+    .tech-stack {
+      gap: 0.5rem;
     }
 
-    .project-btns{
+    .project-btns {
       font-size: 18px;
 
-      a:visited{
+      a:visited {
         color: #000;
       }
     }
   }
-  .project-description{
+  .project-description {
     font-size: 14px;
   }
 }

@@ -5,7 +5,7 @@
   ></app-section-heading>
   <div class="certificates-section">
     <app-custom-carousel>
-      <ng-template #card *ngFor="let certi of certificates; let i = index">
+      <ng-template #sliderCard *ngFor="let certi of certificates; let i = index">
         <div class="card" (click)="fullView(i)">
           <img src="./assets/{{ certi?.img }}" />
         </div>

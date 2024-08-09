@@ -2,12 +2,21 @@
   large_heading="projects"
   small_heading="Mini Projects"
 ></app-section-heading>
-<div class="mini-projects">
-  <ng-container
-    *ngFor="let project of miniProjects"
-    [ngTemplateOutlet]="card"
-    [ngTemplateOutletContext]="project"
-  ></ng-container>
+
+<div class="container">
+  <div class="mini-projects">
+    <button class="prev-button" (click)="scrollPrev()">
+      <mat-icon class="icon">arrow_back_ios</mat-icon>
+    </button>
+    <ng-container
+      *ngFor="let project of miniProjects"
+      [ngTemplateOutlet]="card"
+      [ngTemplateOutletContext]="project"
+    ></ng-container>
+    <button class="next-button" (click)="scrollNext()">
+      <mat-icon class="icon">arrow_forward_ios</mat-icon>
+    </button>
+  </div>
 </div>
 
 <ng-template
@@ -43,10 +52,14 @@
       </span>
       <span>
         <a href="{{ link?.visit }}" target="_blank">
-          <img src="./assets/link.png" width="18px" height="18px"/>
+          <img src="./assets/link.png" width="18px" height="18px" />
         </a>
       </span>
-      <button (click)="openDialog(link?.demo)" mat-raised-button *ngIf="link?.demo">
+      <button
+        (click)="openDialog(link?.demo)"
+        mat-raised-button
+        *ngIf="link?.demo"
+      >
         <img
           src="https://static-00.iconduck.com/assets.00/video-icon-1024x718-rft6cq8n.png"
           width="20px"
@@ -56,6 +69,3 @@
     </div>
   </div>
 </ng-template>
-
-
-

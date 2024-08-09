@@ -13,6 +13,13 @@
     box-sizing: border-box;
   }
 
+  &:hover {
+    .prev-button,
+    .next-button {
+      display: flex;
+    }
+  }
+
   .prev-button,
   .next-button {
     position: absolute;
@@ -29,34 +36,36 @@
     justify-content: center;
     align-items: center;
     border-radius: 2px;
+    border-radius: 50%;
+    display: none;
 
     & .icon {
       font-size: 2rem;
-      margin-top: -.5rem;
+      margin-top: -0.5rem;
     }
   }
   .prev-button {
-    left: 3rem;
+    left: 8rem;
   }
 
   .next-button {
-    right: 3rem;
+    right: 8rem;
   }
 }
 
-
-
 @media screen and (max-width: 800px) {
-
-    .carousel-container{
-        .prev-button{
-            left: -1rem;
-        }
-        .next-button{
-            right : -1rem;
-        }
+  .carousel-container {
+    .prev-button,
+    .next-button {
+    
+      display: flex;
 
     }
-   
-    
+    .prev-button {
+      left: -1rem;
+    }
+    .next-button {
+      right: -1rem;
+    }
   }
+}

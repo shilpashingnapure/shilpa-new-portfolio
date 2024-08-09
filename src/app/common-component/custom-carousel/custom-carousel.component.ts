@@ -13,9 +13,11 @@ import {
   styleUrls: ['./custom-carousel.component.scss'],
 })
 export class CustomCarouselComponent implements OnInit, AfterContentInit {
-  @ContentChildren('card') contentTemplates!: QueryList<TemplateRef<any>>;
+  @ContentChildren('sliderCard') contentTemplates!: QueryList<TemplateRef<any>>;
   carouselContents: TemplateRef<any>[] = [];
   currentIndex = 0;
+
+  
 
   constructor() {}
 
