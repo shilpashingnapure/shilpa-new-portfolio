@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 
 import gsap from 'gsap';
 import { MotionPathPlugin, ScrollTrigger } from 'gsap/all';
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger , MotionPathPlugin);
+
 
 @Component({
     selector: 'app-ufo-path',
@@ -20,20 +20,22 @@ export class UfoPathComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
     this.ufoAnimation()
   }
+
 
   landingAnimation(){
 
     let tween = gsap.timeline()
 
     tween.to('.ufo' , {
-      left:80 ,
+      left:50 ,
     })
 
 
     tween.to('.ufo' , {
-      top : 900 ,
+      top : 650 ,
       transition : 'top 1s ease', 
 
     })

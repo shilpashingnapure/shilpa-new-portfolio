@@ -28,6 +28,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    console.log(document.documentElement.scrollWidth);
     this.scrolled = window.scrollY > 0;
     
   
