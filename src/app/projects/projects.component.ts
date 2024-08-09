@@ -19,6 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 export class ProjectsComponent implements OnInit, AfterViewInit {
   @ViewChildren('card') projectCards: QueryList<ElementRef>;
 
+
+
   topThreeProjects = [
     {
       name: 'Instagram Clone',
@@ -40,10 +42,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         intro:
           'This project is a clone of Instagram, designed to replicate its core functionalities and user interface',
         features: [
-          'sign up / login',
-          'upload/delete post , comment',
-          'like the posts',
-          'user profile management , search for users',
+          'Sign up / login functionality',
+          'User can create, delete & manage  posts',
+          'Integrated like & comment functionalities',
+          'User profile management, including profile picture, post history',
+          'Implement a debouncing search users'
         ],
       },
     },
@@ -87,6 +90,9 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         ],
       },
     },
+    
+    
+    
   ];
   constructor() {}
 
@@ -106,6 +112,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
       cardElement.style.top = `${cumulativeHeight}px`;
 
       cumulativeHeight += cardElement.offsetHeight;
+
 
       if (index + 1 < this.projectCards.length) {
         gsap.from(cardId, {

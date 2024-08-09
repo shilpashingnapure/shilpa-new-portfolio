@@ -13,17 +13,17 @@
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 9%;
     
     .animation {
       width: 100%;
       position: relative;
-      height: 200vh;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       & .project-card {
-        position: absolute;
         perspective: 1000px;
-        perspective-origin: bottom;
+        perspective-origin: top;
         transform-style: preserve-3d;
         backface-visibility: hidden;
         box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -33,10 +33,12 @@
         justify-content: space-between;
         height: auto;
         box-sizing: border-box;
+        transform-origin: top;
 
         // project card odd childs
         &:nth-child(odd) {
           transform: skewx(-12deg);
+          margin-left: 7.3rem;
 
           .project-content {
             transform: skewx(12deg);
@@ -53,6 +55,7 @@
         // project card even childs
         &:nth-child(even) {
           transform: skewx(12deg);
+          margin-right: 5.2rem;
           flex-direction: row-reverse;
           .project-content {
             transform: skewx(-12deg);
@@ -82,20 +85,15 @@
 
         &:nth-child(1) {
           border-radius: 5px 5px 0 0;
+          margin-left: 8rem;
         }
 
         // second child of project card
         &:nth-child(2) {
-          left: 5.6rem;
-          transform-origin: top;
-          transform-style: preserve-3d;
           border-radius: 0;
         }
 
-        &:nth-child(3) {
-          right: 5.4rem;
-          transform-origin: top;
-          transform-style: preserve-3d;
+        &:last-child {
           border-radius: 0 0 5px 5px;
         }
 
