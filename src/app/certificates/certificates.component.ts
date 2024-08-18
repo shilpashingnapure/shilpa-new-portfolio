@@ -19,6 +19,9 @@ import {
 export class CertificatesComponent implements OnInit {
   certificates = [
     {
+      img : 'GSSoC2024.png' , 
+    },
+    {
       img: 'masai-school.png',
       link : 'https://certs.masaischool.com/certificate/masai-fw14-378',
     },
