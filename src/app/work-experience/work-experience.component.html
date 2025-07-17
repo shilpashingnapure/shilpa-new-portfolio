@@ -10,6 +10,25 @@
       mat-align-tabs="start"
       [disablePagination]="true"
     >
+      <mat-tab label="Agriwise Finserv Limited">
+        <ng-container
+          [ngTemplateOutlet]="workDescription"
+          [ngTemplateOutletContext]="{
+            label: 'Agriwise Finserv Limited',
+            position: 'Assistant Manager',
+            date: {
+              start: 'Sep 2024',
+              end: 'Jul 2025'
+            },
+            description: [
+              'Developed an internal AgriTech web app using Angular 17, Node.js, and MySQL',
+              'Created a secure employee portal with workflow automation, managing the full development and deployment process',
+              'Implemented key features like SSO login, dynamic forms, email notifications, admin panel and file uploads.'
+            ]
+          }"
+        >
+        </ng-container>
+      </mat-tab>
       <mat-tab label="Political Data Inc.">
         <ng-container
           [ngTemplateOutlet]="workDescription"
