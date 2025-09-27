@@ -14,6 +14,16 @@ export class MiniProjectsComponent implements OnInit {
 
   miniProjects = [
     {
+      name : "Dev Sport Academy",
+      stack : ['Next.js','Tailwind','Razorpay','Google Sheets'],
+      img : 'devSport.png',
+      description : 'A real-time project built from scratch for Dev Sport Academy. Developed the home page, implemented responsive design, and integrated secure payments using Razorpay with data handling via Google Sheets.',
+      link: {
+        visit: 'https://devsportsacademy.vercel.app/',
+      },
+    
+    },
+    {
       name: 'Tic Tac Toe Game',
       stack: ['TypeScript', 'JavaScript', 'React.js'],
       img: 'ticTacToe.png',

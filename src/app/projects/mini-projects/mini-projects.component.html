@@ -1,6 +1,6 @@
 <app-section-heading
   large_heading="projects"
-  small_heading="Mini Projects"
+  small_heading="Projects"
 ></app-section-heading>
 
 <div class="container">
@@ -41,16 +41,12 @@
       {{ description }}
     </div>
     <div class="project-btns">
-      <span>
+      <span *ngIf="link?.github">
         <a href="{{ link?.github }}" target="_blank">
-          <img
-            src="https://static-00.iconduck.com/assets.00/github-icon-256x250-8uwyx2vs.png"
-            width="20px"
-            height="20px"
-          />
+          <img src="./assets/github.png" width="20px" height="20px" />
         </a>
       </span>
-      <span>
+      <span *ngIf="link?.visit">
         <a href="{{ link?.visit }}" target="_blank">
           <img src="./assets/link.png" width="18px" height="18px" />
         </a>
@@ -60,11 +56,7 @@
         mat-raised-button
         *ngIf="link?.demo"
       >
-        <img
-          src="https://static-00.iconduck.com/assets.00/video-icon-1024x718-rft6cq8n.png"
-          width="20px"
-          height="20px"
-        />
+        <img src="./assets/video-icon.png" width="22px" height="22px" />
       </button>
     </div>
   </div>
