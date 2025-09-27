@@ -168,3 +168,13 @@
   }
   
 }
+
+@media screen and (min-width: 2000px) {
+  .intro-section{
+    width: 50%;
+
+    .about{
+      justify-content: center;
+    }
+  }
+}

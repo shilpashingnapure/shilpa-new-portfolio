@@ -63,7 +63,7 @@ export class UfoPathComponent implements OnInit {
       scrollTrigger : {
         trigger: '.portfolio',
         start: 'top top',
-        end: 'bottom bottom',
+        end : "bottom bottom",
         scrub: 1.5,
         toggleActions : 'play none none none',
         onUpdate : ()=>{

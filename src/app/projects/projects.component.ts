@@ -102,6 +102,8 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     this.projectCardAnimation();
   }
 
+  
+
   projectCardAnimation() {
     let cumulativeHeight = 0;
     this.projectCards.forEach((card, index) => {

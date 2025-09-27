@@ -14,7 +14,7 @@
     flex-direction: column;
     margin: auto;
     margin-bottom: 9%;
-    
+
     .animation {
       width: 100%;
       position: relative;
@@ -38,15 +38,14 @@
         // project card odd childs
         &:nth-child(odd) {
           transform: skewx(-12deg);
-          margin-left: 7.3rem;
-
+          margin-right: -6.5rem;
           .project-content {
             transform: skewx(12deg);
           }
 
           .project-img {
             transform: skewx(12deg);
-            .single-img{
+            .single-img {
               margin-left: 5rem;
             }
           }
@@ -55,7 +54,7 @@
         // project card even childs
         &:nth-child(even) {
           transform: skewx(12deg);
-          margin-right: 5.2rem;
+          margin-left: -6.2rem;
           flex-direction: row-reverse;
           .project-content {
             transform: skewx(-12deg);
@@ -77,7 +76,7 @@
               }
             }
 
-            .single-img{
+            .single-img {
               margin-right: 5rem;
             }
           }
@@ -85,7 +84,7 @@
 
         &:nth-child(1) {
           border-radius: 5px 5px 0 0;
-          margin-left: 8rem;
+          margin-left: 0.5rem;
         }
 
         // second child of project card
@@ -115,18 +114,15 @@
               z-index: 10;
               transition: all 0.2s;
               box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-              
 
-
-              &:hover{
-                
-                transform: scale(1.05) translateY(-.5rem);
-                z-index:20;
+              &:hover {
+                transform: scale(1.05) translateY(-0.5rem);
+                z-index: 20;
               }
 
-              &:not(:hover){
-                transform: scale(.95);
-              } 
+              &:not(:hover) {
+                transform: scale(0.95);
+              }
 
               img {
                 width: 100%;
@@ -195,11 +191,11 @@
             color: #858282;
             gap: 0.5rem;
 
-            p{
+            p {
               line-height: 1.5rem;
             }
 
-            .sub-header{
+            .sub-header {
               font-size: 16px;
               font-weight: 600;
               margin-bottom: 5px;
@@ -308,7 +304,6 @@
       }
     }
 
-    
     .non-animation {
       display: flex;
       flex-direction: column;
@@ -316,7 +311,7 @@
       width: 100%;
       padding: 0;
 
-      .project-stack{
+      .project-stack {
         margin: auto;
       }
 
@@ -324,7 +319,7 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain; 
+          object-fit: contain;
           object-position: center;
         }
         .multiple-imgs {
@@ -337,13 +332,23 @@
           }
         }
 
-        .single-img{
-          width: 20rem;
+        .single-img {
+          width: 100%;
           height: 15rem;
-
+          margin: auto;
         }
       }
     }
   }
 }
 
+@media screen and (min-width: 2000px) {
+  #project {
+    .animation {
+      & .project-card {
+        width: 49% !important;
+
+      }
+    }
+  }
+}

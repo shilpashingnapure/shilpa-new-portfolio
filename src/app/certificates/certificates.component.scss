@@ -77,3 +77,14 @@
 
   
 }
+
+
+@media screen and (min-width: 2000px) {
+  .certificates-section {
+    width: 40%;
+
+    .card{
+      height: 50vh;
+    }
+  }
+}

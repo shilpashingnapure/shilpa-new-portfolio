@@ -1,17 +1,33 @@
 @import "compass-mixins/lib/compass/css3";
 
+// Function to generate multiple box-shadows
 @function multiple-box-shadow($n) {
-  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  $value: "#{random(100)}vw #{random(100)}vh #FFF";
   @for $i from 2 through $n {
-    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+    $value: "#{$value}, #{random(100)}vw #{random(100)}vh #FFF";
   }
   @return unquote($value);
 }
 
-$shadows-small: multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(250);
-$shadows-big: multiple-box-shadow(150);
+// Shadow layers
+$shadows-small: multiple-box-shadow(150);
+$shadows-medium: multiple-box-shadow(80);
+$shadows-big: multiple-box-shadow(50);
 
+
+// Base container for stars
+.stars-container {
+  position: fixed;      // stay over whole page
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none; // doesn't block clicks
+  z-index: -1;
+}
+
+// Layer 1 - small stars
 #stars {
   width: 1px;
   height: 1px;
@@ -22,7 +38,6 @@ $shadows-big: multiple-box-shadow(150);
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -30,6 +45,7 @@ $shadows-big: multiple-box-shadow(150);
   }
 }
 
+// Layer 2 - medium stars
 #stars2 {
   width: 2px;
   height: 2px;
@@ -40,7 +56,6 @@ $shadows-big: multiple-box-shadow(150);
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -48,6 +63,7 @@ $shadows-big: multiple-box-shadow(150);
   }
 }
 
+// Layer 3 - big stars
 #stars3 {
   width: 3px;
   height: 3px;
@@ -58,10 +74,48 @@ $shadows-big: multiple-box-shadow(150);
   &:after {
     content: " ";
     position: absolute;
-    top: 2000px;
     width: 3px;
     height: 3px;
     background: transparent;
     box-shadow: $shadows-big;
+  }
+}
+
+// Falling animation
+@keyframes animStar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  // Regenerate fewer stars for mobile
+  $shadows-small: multiple-box-shadow(50);
+  $shadows-medium: multiple-box-shadow(25);
+  $shadows-big: multiple-box-shadow(10);
+
+  // Reassign box-shadow to each layer
+  #stars {
+    box-shadow: $shadows-small;
+    &:after {
+      box-shadow: $shadows-small;
+    }
+  }
+
+  #stars2 {
+    box-shadow: $shadows-medium;
+    &:after {
+      box-shadow: $shadows-medium;
+    }
+  }
+
+  #stars3 {
+    box-shadow: $shadows-big;
+    &:after {
+      box-shadow: $shadows-big;
+    }
   }
 }
