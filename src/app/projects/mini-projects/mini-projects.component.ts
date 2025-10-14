@@ -17,7 +17,7 @@ export class MiniProjectsComponent implements OnInit {
       name : "Dev Sport Academy",
       stack : ['Next.js','Tailwind'],
       img : 'devSport.png',
-      description : 'A real-time project built from scratch for Dev Sport Academy.',
+      description : 'A real-time project built for Dev Sport Academy.',
       link: {
         visit: 'https://devsportsacademy.vercel.app/',
       },
