@@ -15,7 +15,7 @@ export class MiniProjectsComponent implements OnInit {
   miniProjects = [
     {
       name : "Dev Sport Academy",
-      stack : ['Next.js','Tailwind',
+      stack : ['Next.js','Tailwind'],
       img : 'devSport.png',
       description : 'A real-time project built from scratch for Dev Sport Academy.',
       link: {
