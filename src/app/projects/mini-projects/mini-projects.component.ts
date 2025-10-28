@@ -15,7 +15,7 @@ export class MiniProjectsComponent implements OnInit {
   miniProjects = [
     {
       name : "Bainterior website",
-      stack : ["Next.js","Tailwind"],
+      stack : ["Next.js","Tailwind","TypeScript"],
       img : "bainterior.png",
       description : "Developed a responsive portfolio site for a web designer to showcase projects and services.",
       link : {
@@ -24,7 +24,7 @@ export class MiniProjectsComponent implements OnInit {
     },
     {
       name : "Dev Sport Academy",
-      stack : ['Next.js','Tailwind'],
+      stack : ['Next.js','Tailwind','TypeScript'],
       img : 'devSport.png',
       description : 'Developed a responsive website for a sports academy to display programs, coaches, and contact details.',
       link: {
