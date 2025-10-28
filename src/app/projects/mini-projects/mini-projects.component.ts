@@ -13,15 +13,15 @@ export class MiniProjectsComponent implements OnInit {
   ngOnInit(): void {}
 
   miniProjects = [
-    // {
-    //   name : "Bainterior website",
-    //   stack : ["Next.js","Tailwind"],
-    //   img : "",
-    //   description : "Developed a responsive portfolio site for a web designer to showcase projects and services.",
-    //   link : {
-    //     visit: 'https://bainterior.com/'
-    //   }
-    // },
+    {
+      name : "Bainterior website",
+      stack : ["Next.js","Tailwind"],
+      img : "bainterior.png",
+      description : "Developed a responsive portfolio site for a web designer to showcase projects and services.",
+      link : {
+        visit: 'https://bainterior.com/'
+      }
+    },
     {
       name : "Dev Sport Academy",
       stack : ['Next.js','Tailwind'],
